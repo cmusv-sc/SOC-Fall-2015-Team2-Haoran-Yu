@@ -30,6 +30,9 @@ import javax.persistence.PersistenceException;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * The main set of web services.
@@ -48,6 +51,16 @@ public class UserController extends Controller {
 	}
 
 	public Result addUser() {
+
+		try {
+            FileWriter fw = new FileWriter(new File("log.txt"));
+            fw.write("!!");
+            fw.close();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
 		System.out.println("backend!!");
 		JsonNode json = request().body().asJson();
 		if (json == null) {
