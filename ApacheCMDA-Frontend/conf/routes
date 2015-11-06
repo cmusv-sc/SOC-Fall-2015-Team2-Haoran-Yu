@@ -7,6 +7,7 @@ GET         /home                               controllers.ClimateServiceContro
 GET             /                               controllers.ClimateServiceController.login()
 GET         /register                           controllers.ClimateServiceController.register()
 GET         /login                              controllers.ClimateServiceController.login()
+POST 		/register                           controllers.ClimateServiceController.userRegister()
 
 
 # BugReporting
@@ -27,11 +28,15 @@ GET			/climate/climateServices							controllers.ClimateServiceController.climat
 GET			/climate/mostRecentlyAddedClimateServices			controllers.ClimateServiceController.mostRecentlyAddedClimateServices()
 GET			/climate/mostRecentlyUsedClimateServices			controllers.ClimateServiceController.mostRecentlyUsedClimateServices()
 GET			/climate/mostPopularClimateServices					controllers.ClimateServiceController.mostPopularClimateServices()
+
 POST		/climate/new/climateServices    					controllers.ClimateServiceController.newClimateService()
+
 POST    	/climate/delete/climateServices   					controllers.ClimateServiceController.deleteClimateService()
 POST		/climate/download/climateServices					controllers.ClimateServiceController.downloadClimateService()
 POST		/climate/edit/climateServices						controllers.ClimateServiceController.editClimateService()
+
 GET			/climate/new/climateServices						controllers.ClimateServiceController.addClimateServices()
+
 GET			/climate/oneService									controllers.ClimateServiceController.oneService(url ?= null)
 
 #Keyword search
