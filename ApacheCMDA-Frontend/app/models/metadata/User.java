@@ -66,6 +66,7 @@ public class User{
 	 * @return the response from the API server
 	 */
 	public static JsonNode create(JsonNode jsonData) {
+		System.out.println("metadata user");
 		return APICall.postAPI(ADD_USER_SERVICE_CALL, jsonData);
 	}
 

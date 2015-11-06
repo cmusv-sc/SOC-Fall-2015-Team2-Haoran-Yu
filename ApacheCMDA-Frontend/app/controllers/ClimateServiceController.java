@@ -84,6 +84,7 @@ public class ClimateServiceController extends Controller {
 		try {
 
 			String originalClimateServiceName = dc.field("userName").value();
+			System.out.println("user name: " + dc.field("userName").value());
 			String newClimateServiceName = originalClimateServiceName.replace(' ', '-');
 
 			if (newClimateServiceName != null && !newClimateServiceName.isEmpty()) {

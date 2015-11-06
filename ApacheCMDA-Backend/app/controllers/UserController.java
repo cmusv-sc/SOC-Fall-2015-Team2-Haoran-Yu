@@ -48,6 +48,7 @@ public class UserController extends Controller {
 	}
 
 	public Result addUser() {
+		System.out.println("backend!!");
 		JsonNode json = request().body().asJson();
 		if (json == null) {
 			System.out.println("User not created, expecting Json data");
@@ -56,6 +57,7 @@ public class UserController extends Controller {
 
 		// Parse JSON file
 		String userName = json.path("userName").asText();
+		System.out.println("backend username: " + userName);
 		String password = json.path("password").asText();
 		String firstName = json.path("firstName").asText();
 		String lastName = json.path("lastName").asText();
