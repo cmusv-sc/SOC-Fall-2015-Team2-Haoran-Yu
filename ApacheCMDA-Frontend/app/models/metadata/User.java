@@ -42,29 +42,7 @@ public class User{
 	private String highestDegree;
 
 
-	public String getScenario() {
-		return scenario;
-	}
-
-	public void setScenario(String scenario) {
-		this.scenario = scenario;
-	}
-
-	public String getVersion() {
-		return version;
-	}
-
-	public void setVersion(String version) {
-		this.version = version;
-	}
-
-	public String getRootservice() {
-		return rootservice;
-	}
-
-	public void setRootservice(String rootservice) {
-		this.rootservice = rootservice;
-	}
+	
 
 	private static final String GET_CLIMATE_SERVICES_CALL = Constants.NEW_BACKEND+"climateService/getAllClimateServices/json";
 
