@@ -20,6 +20,7 @@ package controllers;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import models.metadata.ClimateService;
+import models.metadata.User;
 import play.Logger;
 import play.data.Form;
 import play.libs.Json;
@@ -104,7 +105,7 @@ public class ClimateServiceController extends Controller {
 			Application.flashMsg(APICall.createResponse(ResponseType.UNKNOWN));
 		}
 		// return redirect("/climate/climateServices");
-		return redirect("/climate/login");
+		return redirect("/login");
 	}
 	
 	public static Result mostRecentlyAddedClimateServices() {
