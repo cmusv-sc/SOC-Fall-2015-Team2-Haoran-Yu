@@ -105,7 +105,7 @@ public class ClimateServiceController extends Controller {
 			Application.flashMsg(APICall.createResponse(ResponseType.UNKNOWN));
 		}
 		// return redirect("/climate/climateServices");
-		return redirect("/login");
+		return redirect("/");
 	}
 	
 	public static Result mostRecentlyAddedClimateServices() {
