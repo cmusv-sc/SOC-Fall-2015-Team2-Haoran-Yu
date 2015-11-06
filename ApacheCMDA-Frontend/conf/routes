@@ -3,8 +3,10 @@
 # ~~~~
 
 # Home page
-GET         /home                                                controllers.ClimateServiceController.home(email ?= null, vfile ?= null, dataset ?= null)
-GET 		/													 controllers.ClimateServiceController.home(email ?= null, vfile ?= null, dataset ?= null)
+GET         /home                               controllers.ClimateServiceController.home(email ?= null, vfile ?= null, dataset ?= null)
+GET             /                               controllers.ClimateServiceController.login()
+GET         /register                           controllers.ClimateServiceController.register()
+GET         /login                              controllers.ClimateServiceController.login()
 
 
 # BugReporting

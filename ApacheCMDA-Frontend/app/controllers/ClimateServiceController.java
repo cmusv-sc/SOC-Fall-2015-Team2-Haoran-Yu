@@ -61,6 +61,14 @@ public class ClimateServiceController extends Controller {
 		return ok(climateServices.render(ClimateService.all(),
 				climateServiceForm));
 	}
+
+	public static Result login(){
+               return ok(login.render());
+        }
+
+    public static Result register(){
+               return ok(register.render());
+	}
 	
 	public static Result mostRecentlyAddedClimateServices() {
 		return ok(mostRecentlyAddedServices.render(ClimateService.getMostRecentlyAdded(),
