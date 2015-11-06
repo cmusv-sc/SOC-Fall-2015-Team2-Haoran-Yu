@@ -77,7 +77,7 @@ public class ClimateServiceController extends Controller {
  //               return ok(register.render());
 	// }
 	// 
-	publis static Result userRegister(){
+	public static Result userRegister(){
 		Form<User> dc = userForm.bindFromRequest();
 		ObjectNode jsonData = Json.newObject();
 		try {
@@ -94,7 +94,6 @@ public class ClimateServiceController extends Controller {
 			jsonData.put("lastName", dc.field("lastName").value());
 			jsonData.put("email", dc.field("email").value());
 			JsonNode response = User.create(jsonData);
-			// JsonNode response = ClimateService.create(jsonData);
 			Application.flashMsg(response);
 		} catch (IllegalStateException e) {
 			e.printStackTrace();
