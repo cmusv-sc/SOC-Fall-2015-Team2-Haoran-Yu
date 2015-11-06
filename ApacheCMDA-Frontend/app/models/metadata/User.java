@@ -52,7 +52,7 @@ public class User{
 	
 	private static final String GET_MOST_POPULAR_CLIMATE_SERVICES_CALL = Constants.NEW_BACKEND+"climateService/getAllMostUsedClimateServices/json";
 	
-	private static final String ADD_USER_SERVICE_CALL = Constants.NEW_BACKEND+"/users/add";
+	private static final String ADD_USER_SERVICE_CALL = Constants.NEW_BACKEND+"users/add";
 
 	private static final String DELETE_CLIMATE_SERVICE_CALL = Constants.NEW_BACKEND + util.Constants.NEW_DELETE_CLIMATE_SERVICE;
 	private static final String EDIT_CLIMATE_SERVICE_CALL = Constants.NEW_BACKEND+ "climateService/"
