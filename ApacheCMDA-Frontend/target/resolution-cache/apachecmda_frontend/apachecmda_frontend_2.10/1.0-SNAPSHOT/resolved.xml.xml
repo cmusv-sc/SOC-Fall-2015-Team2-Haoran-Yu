@@ -4,11 +4,7 @@
 		module="apachecmda_frontend_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-<<<<<<< HEAD
-		publication="20151106211314"
-=======
-		publication="20151106210957"
->>>>>>> 05b2d34f3a5cbb037c401220cadab6ceaf7c973f
+		publication="20151106235141"
 	>
 		<description>
 		ApacheCMDA_Frontend

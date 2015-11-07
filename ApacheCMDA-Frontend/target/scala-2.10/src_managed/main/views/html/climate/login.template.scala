@@ -102,13 +102,8 @@ Seq[Any](_display_(Seq[Any](/*18.2*/main("Login")/*18.15*/ {_display_(Seq[Any](f
 }
                 /*
                     -- GENERATED --
-<<<<<<< HEAD
-                    DATE: Fri Nov 06 21:18:47 EST 2015
-                    SOURCE: /Users/User/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Frontend/app/views/climate/login.scala.html
-=======
-                    DATE: Fri Nov 06 21:13:36 EST 2015
-                    SOURCE: /Users/Leo/Documents/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Frontend/app/views/climate/login.scala.html
->>>>>>> 05b2d34f3a5cbb037c401220cadab6ceaf7c973f
+                    DATE: Fri Nov 06 23:51:46 EST 2015
+                    SOURCE: /Users/Tongyun/Documents/SOC-Fall-2015-Team2-Haoran-Yu-60e5416fb2ffd2de3b1989acc6e8036026d5680d/ApacheCMDA-Frontend/app/views/climate/login.scala.html
                     HASH: 10f7d809b75ff54bbb6b26e9424172ae180ef89e
                     MATRIX: 3267->1205|3289->1218|3329->1220|4429->2289
                     LINES: 59->18|59->18|59->18|90->49

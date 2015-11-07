@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-// @SOURCE:/Users/User/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Frontend/conf/routes
+// @SOURCE:/Users/Tongyun/Documents/SOC-Fall-2015-Team2-Haoran-Yu-60e5416fb2ffd2de3b1989acc6e8036026d5680d/ApacheCMDA-Frontend/conf/routes
 // @HASH:f29d163d719cba268231c9c55b338c4ff64cfea0
-// @DATE:Fri Nov 06 21:18:45 EST 2015
-=======
-// @SOURCE:/Users/Leo/Documents/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Frontend/conf/routes
-// @HASH:f29d163d719cba268231c9c55b338c4ff64cfea0
-// @DATE:Fri Nov 06 21:13:32 EST 2015
->>>>>>> 05b2d34f3a5cbb037c401220cadab6ceaf7c973f
+// @DATE:Fri Nov 06 23:51:45 EST 2015
 
 package controllers;
 

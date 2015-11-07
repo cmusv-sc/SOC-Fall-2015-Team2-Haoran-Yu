@@ -110,13 +110,8 @@ Seq[Any](format.raw/*18.49*/("""
 }
                 /*
                     -- GENERATED --
-<<<<<<< HEAD
-                    DATE: Fri Nov 06 21:18:47 EST 2015
-                    SOURCE: /Users/User/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Frontend/app/views/climate/home.scala.html
-=======
-                    DATE: Fri Nov 06 21:13:36 EST 2015
-                    SOURCE: /Users/Leo/Documents/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Frontend/app/views/climate/home.scala.html
->>>>>>> 05b2d34f3a5cbb037c401220cadab6ceaf7c973f
+                    DATE: Fri Nov 06 23:51:46 EST 2015
+                    SOURCE: /Users/Tongyun/Documents/SOC-Fall-2015-Team2-Haoran-Yu-60e5416fb2ffd2de3b1989acc6e8036026d5680d/ApacheCMDA-Frontend/app/views/climate/home.scala.html
                     HASH: eb44991c1be4dab59170607ccdc824695edbd5ba
                     MATRIX: 3190->1205|3349->1252|3378->1272|3415->1274|3436->1286|3476->1288|4260->2036|4297->2064|4336->2065|4392->2086|4410->2095|4449->2096|4574->2189|4624->2207|4686->2238
                     LINES: 56->18|60->18|62->21|63->22|63->22|63->22|89->48|89->48|89->48|92->51|92->51|92->51|93->52|95->54|100->59
