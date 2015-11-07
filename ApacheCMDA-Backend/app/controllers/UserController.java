@@ -51,10 +51,12 @@ public class UserController extends Controller {
 	}
 
 	public Result addUser() {
+		FileWriter fw = null;
         try{
 
-        	FileWriter fw = new FileWriter(new File("log.txt"));
+        	fw = new FileWriter(new File("log.txt"));
             fw.write("backend!");
+
 			// System.out.println("backend!!");
 			JsonNode json = request().body().asJson();
 			if (json == null) {
@@ -64,6 +66,7 @@ public class UserController extends Controller {
 
 			// Parse JSON file
 			String userName = json.path("userName").asText();
+			fw.write("usename" + userName);
 			String password = json.path("password").asText();
 			String firstName = json.path("firstName").asText();
 			String lastName = json.path("lastName").asText();
@@ -86,19 +89,25 @@ public class UserController extends Controller {
 				User user = new User(userName, password, firstName, lastName, middleInitial, affiliation, title, email, mailingAddress, phoneNumber, faxNumber, researchFields, highestDegree);	
 				userRepository.save(user);
 				fw.write("User saved: " + user.getId());
-				fw.close();
+				
 				// System.out.println("User saved: " + user.getId());
 				return created(new Gson().toJson(user.getId()));
 			} catch (PersistenceException pe) {
 				pe.printStackTrace();
 				fw.write("User not saved: " + firstName + " " + lastName);
 				// System.out.println("User not saved: " + firstName + " " + lastName);
-				fw.close();
 				return badRequest("User not saved: " + firstName + " " + lastName);
 			}
 			// fw.close();
 		} catch(Exception e){
-
+			fw.write("exception");
+		} finally{
+			fw.write("close");
+			try{
+				fw.close();
+			} catch(IOException e){
+				fw.write("excep");
+			}
 		}
 	}
 
