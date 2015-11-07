@@ -13,7 +13,9 @@ GET           /climateService/getAllClimateServices/json                        
 GET           /climateService/getAllMostRecentClimateServicesByCreateTime/json                          @controllers.ClimateServiceController.getAllClimateServicesOrderByCreateTime(format: String="json")
 GET           /climateService/getAllMostRecentClimateServicesByLatestAccessTime/json                    @controllers.ClimateServiceController.getAllClimateServicesOrderByLatestAccessTime(format: String="json")
 GET           /climateService/getAllMostUsedClimateServices/json                                        @controllers.ClimateServiceController.getAllClimateServicesOrderByCount(format: String="json")
+
 POST          /climateService/addClimateService                                                         @controllers.ClimateServiceController.addClimateService
+
 GET           /climateService/getAllServiceEntries/json                                                 @controllers.ClimateServiceController.getAllServiceEntries(format: String="json")
 POST          /climateService/addServiceEntry                                                           @controllers.ClimateServiceController.addServiceEntry
 PUT           /climateService/updateClimateService/id/:id                                               @controllers.ClimateServiceController.updateClimateServiceById(id: Long)
