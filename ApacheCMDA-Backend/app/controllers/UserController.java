@@ -51,11 +51,9 @@ public class UserController extends Controller {
 	}
 
 	public Result addUser() {
-
+		FileWriter fw = null;
 		try {
-            FileWriter fw = new FileWriter(new File("log.txt"));
-            fw.write("!!");
-            fw.close();
+            fw = new FileWriter(new File("log.txt"));
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -64,7 +62,7 @@ public class UserController extends Controller {
 		System.out.println("backend!!");
 		JsonNode json = request().body().asJson();
 		if (json == null) {
-			System.out.println("User not created, expecting Json data");
+			fw.write("User not created, expecting Json data");
 			return badRequest("User not created, expecting Json data");
 		}
 
@@ -86,18 +84,27 @@ public class UserController extends Controller {
 
 		try {
 			if (userRepository.findByUserName(userName).size()>0) {
-				System.out.println("UserName has been used: " + userName);
+				fw.write("UserName has been used: " + userName);
+				// System.out.println("UserName has been used: " + userName);
 				return badRequest("UserName has been used");
 			}
 			User user = new User(userName, password, firstName, lastName, middleInitial, affiliation, title, email, mailingAddress, phoneNumber, faxNumber, researchFields, highestDegree);	
 			userRepository.save(user);
-			System.out.println("User saved: " + user.getId());
+			fw.write("User saved: " + user.getId());
+			// System.out.println("User saved: " + user.getId());
 			return created(new Gson().toJson(user.getId()));
 		} catch (PersistenceException pe) {
 			pe.printStackTrace();
 			System.out.println("User not saved: " + firstName + " " + lastName);
 			return badRequest("User not saved: " + firstName + " " + lastName);
 		}
+
+		try{
+			fw.close();
+		}catch(Exception e){
+
+		}
+
 	}
 
 	public Result deleteUser(Long id) {
