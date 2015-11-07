@@ -34,3 +34,12 @@ http://localhost:9034/climateService/getAllClimateServices/json
 2015-11-06 21:33:34,073 - [INFO] - from application in play-akka.actor.default-dispatcher-24 
 http://localhost:9034/climateService/getAllClimateServices/json
 
+2015-11-06 22:29:41,868 - [INFO] - from application in play-akka.actor.default-dispatcher-31 
+http://localhost:9034/climateService/getAllClimateServices/json
+
+2015-11-06 22:29:43,518 - [INFO] - from application in play-akka.actor.default-dispatcher-34 
+http://localhost:9034/dataset/getAllDatasets/json
+
+2015-11-06 22:34:29,783 - [INFO] - from application in play-akka.actor.default-dispatcher-43 
+http://localhost:9034/climateService/getAllClimateServices/json
+
