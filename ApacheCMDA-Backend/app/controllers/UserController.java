@@ -56,7 +56,7 @@ public class UserController extends Controller {
         	FileWriter fw = new FileWriter(new File("log.txt"));
 
 
-			System.out.println("backend!!");
+			// System.out.println("backend!!");
 			JsonNode json = request().body().asJson();
 			if (json == null) {
 				fw.write("User not created, expecting Json data");
@@ -65,7 +65,6 @@ public class UserController extends Controller {
 
 			// Parse JSON file
 			String userName = json.path("userName").asText();
-			System.out.println("backend username: " + userName);
 			String password = json.path("password").asText();
 			String firstName = json.path("firstName").asText();
 			String lastName = json.path("lastName").asText();
@@ -92,15 +91,16 @@ public class UserController extends Controller {
 				return created(new Gson().toJson(user.getId()));
 			} catch (PersistenceException pe) {
 				pe.printStackTrace();
-				System.out.println("User not saved: " + firstName + " " + lastName);
+				fw.write("User not saved: " + firstName + " " + lastName);
+				// System.out.println("User not saved: " + firstName + " " + lastName);
 				return badRequest("User not saved: " + firstName + " " + lastName);
 			}
+
+			fw.close();
 
 		}catch(Exception e){
 
 		}
-
-
 	}
 
 	public Result deleteUser(Long id) {
