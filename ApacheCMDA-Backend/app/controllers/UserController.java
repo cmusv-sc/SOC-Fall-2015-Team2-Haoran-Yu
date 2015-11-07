@@ -30,6 +30,9 @@ import javax.persistence.PersistenceException;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * The main set of web services.
@@ -48,43 +51,56 @@ public class UserController extends Controller {
 	}
 
 	public Result addUser() {
-		System.out.println("backend!!");
-		JsonNode json = request().body().asJson();
-		if (json == null) {
-			System.out.println("User not created, expecting Json data");
-			return badRequest("User not created, expecting Json data");
-		}
+        try{
 
-		// Parse JSON file
-		String userName = json.path("userName").asText();
-		System.out.println("backend username: " + userName);
-		String password = json.path("password").asText();
-		String firstName = json.path("firstName").asText();
-		String lastName = json.path("lastName").asText();
-		String middleInitial = json.path("middleInitial").asText();
-	    String affiliation = json.path("affiliation").asText();
-	    String title = json.path("title").asText();
-	    String email = json.path("email").asText();
-	    String mailingAddress = json.path("mailingAddress").asText();
-	    String phoneNumber = json.path("phoneNumber").asText();
-	    String faxNumber = json.path("faxNumber").asText();
-	    String researchFields = json.path("researchFields").asText();
-	    String highestDegree = json.path("highestDegree").asText();
+        	FileWriter fw = new FileWriter(new File("log.txt"));
 
-		try {
-			if (userRepository.findByUserName(userName).size()>0) {
-				System.out.println("UserName has been used: " + userName);
-				return badRequest("UserName has been used");
+
+			System.out.println("backend!!");
+			JsonNode json = request().body().asJson();
+			if (json == null) {
+				fw.write("User not created, expecting Json data");
+				return badRequest("User not created, expecting Json data");
 			}
-			User user = new User(userName, password, firstName, lastName, middleInitial, affiliation, title, email, mailingAddress, phoneNumber, faxNumber, researchFields, highestDegree);	
-			userRepository.save(user);
-			System.out.println("User saved: " + user.getId());
-			return created(new Gson().toJson(user.getId()));
-		} catch (PersistenceException pe) {
-			pe.printStackTrace();
-			System.out.println("User not saved: " + firstName + " " + lastName);
-			return badRequest("User not saved: " + firstName + " " + lastName);
+
+			// Parse JSON file
+			String userName = json.path("userName").asText();
+			System.out.println("backend username: " + userName);
+			String password = json.path("password").asText();
+			String firstName = json.path("firstName").asText();
+			String lastName = json.path("lastName").asText();
+			String middleInitial = json.path("middleInitial").asText();
+		    String affiliation = json.path("affiliation").asText();
+		    String title = json.path("title").asText();
+		    String email = json.path("email").asText();
+		    String mailingAddress = json.path("mailingAddress").asText();
+		    String phoneNumber = json.path("phoneNumber").asText();
+		    String faxNumber = json.path("faxNumber").asText();
+		    String researchFields = json.path("researchFields").asText();
+		    String highestDegree = json.path("highestDegree").asText();
+
+			try {
+				if (userRepository.findByUserName(userName).size()>0) {
+					fw.write("UserName has been used: " + userName);
+					// System.out.println("UserName has been used: " + userName);
+					return badRequest("UserName has been used");
+				}
+				User user = new User(userName, password, firstName, lastName, middleInitial, affiliation, title, email, mailingAddress, phoneNumber, faxNumber, researchFields, highestDegree);	
+				userRepository.save(user);
+				fw.write("User saved: " + user.getId());
+				// System.out.println("User saved: " + user.getId());
+				return created(new Gson().toJson(user.getId()));
+			} catch (PersistenceException pe) {
+				pe.printStackTrace();
+				System.out.println("User not saved: " + firstName + " " + lastName);
+				return badRequest("User not saved: " + firstName + " " + lastName);
+			}
+
+		}catch(Exception e){
+
 		}
+
+
 	}
 
 	public Result deleteUser(Long id) {
