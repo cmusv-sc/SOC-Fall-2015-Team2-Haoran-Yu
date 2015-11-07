@@ -45,8 +45,13 @@ Seq[Any](format.raw/*1.19*/("""
 }
               /*
                   -- GENERATED --
+<<<<<<< HEAD
                   DATE: Fri Nov 06 21:19:34 EST 2015
                   SOURCE: /Users/User/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/app/views/index.scala.html
+=======
+                  DATE: Fri Nov 06 21:12:59 EST 2015
+                  SOURCE: /Users/Leo/Documents/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/app/views/index.scala.html
+>>>>>>> 05b2d34f3a5cbb037c401220cadab6ceaf7c973f
                   HASH: 2525948bb0b9a19833e9b9027e706281dd6c624c
                   MATRIX: 723->1|828->18|856->21|887->44|926->46|958->53|972->59|1025->92|1057->95
                   LINES: 26->1|29->1|31->3|31->3|31->3|33->5|33->5|33->5|35->7

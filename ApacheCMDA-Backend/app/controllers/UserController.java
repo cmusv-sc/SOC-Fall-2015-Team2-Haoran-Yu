@@ -63,8 +63,12 @@ public class UserController extends Controller {
 			System.out.println("not return");
 			// Parse JSON file
 			String userName = json.path("userName").asText();
+<<<<<<< HEAD
 			if(userName.length() == 0) System.out.println("length is 0");
 			System.out.println("username: " + userName);
+=======
+			System.out.println(userName);
+>>>>>>> 05b2d34f3a5cbb037c401220cadab6ceaf7c973f
 			String password = json.path("password").asText();
 			String firstName = json.path("firstName").asText();
 			String lastName = json.path("lastName").asText();

@@ -4,7 +4,11 @@
 		module="apachecmda-backend-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
+<<<<<<< HEAD
 		publication="20151106205545"
+=======
+		publication="20151106210448"
+>>>>>>> 05b2d34f3a5cbb037c401220cadab6ceaf7c973f
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 2015-11-06 23:23:35,427 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9034
 
 2015-11-06 23:24:07,857 - [INFO] - from play in play-internal-execution-context-1 
+=======
+2015-11-06 21:29:20,125 - [INFO] - from play in pool-4-thread-4 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9034
+
+2015-11-06 21:30:12,182 - [INFO] - from play in play-internal-execution-context-1 
+>>>>>>> 05b2d34f3a5cbb037c401220cadab6ceaf7c973f
 Application started (Dev)
 

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 // @SOURCE:/Users/User/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/conf/routes
 // @HASH:62c815732c6abc0b76e566e1690f327aac408f22
 // @DATE:Fri Nov 06 21:19:32 EST 2015
+=======
+// @SOURCE:/Users/Leo/Documents/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/conf/routes
+// @HASH:62c815732c6abc0b76e566e1690f327aac408f22
+// @DATE:Fri Nov 06 21:12:58 EST 2015
+>>>>>>> 05b2d34f3a5cbb037c401220cadab6ceaf7c973f
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
