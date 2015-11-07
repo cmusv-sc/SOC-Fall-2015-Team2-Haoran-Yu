@@ -1,6 +1,6 @@
-// @SOURCE:/home/xingwei/SOC-Fall-2015/ApacheCMDA-Backend/conf/routes
-// @HASH:e96e26a337fbb66761533edb5e7687789222dff1
-// @DATE:Fri Sep 18 18:16:24 PDT 2015
+// @SOURCE:/Users/User/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/conf/routes
+// @HASH:62c815732c6abc0b76e566e1690f327aac408f22
+// @DATE:Fri Nov 06 21:19:32 EST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,39 +15,39 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:58
+// @LINE:60
+// @LINE:57
+// @LINE:56
 // @LINE:55
 // @LINE:54
 // @LINE:53
 // @LINE:52
 // @LINE:51
-// @LINE:50
-// @LINE:49
+// @LINE:48
+// @LINE:47
 // @LINE:46
 // @LINE:45
 // @LINE:44
 // @LINE:43
 // @LINE:42
-// @LINE:41
-// @LINE:40
+// @LINE:39
+// @LINE:38
 // @LINE:37
 // @LINE:36
 // @LINE:35
 // @LINE:34
-// @LINE:33
-// @LINE:32
+// @LINE:31
+// @LINE:30
 // @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
-// @LINE:25
+// @LINE:24
+// @LINE:23
 // @LINE:22
 // @LINE:21
 // @LINE:20
 // @LINE:19
-// @LINE:18
 // @LINE:17
-// @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
@@ -56,11 +56,11 @@ import Router.queryString
 // @LINE:10
 package controllers {
 
-// @LINE:58
+// @LINE:60
 class ReverseAssets {
 
 
-// @LINE:58
+// @LINE:60
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -70,43 +70,43 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:31
+// @LINE:30
 // @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
-// @LINE:25
 class ReverseInstrumentController {
 
 
-// @LINE:25
+// @LINE:27
 def getAllInstruments(): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "instrument/getAllInstruments/json")
 }
                         
 
-// @LINE:26
+// @LINE:28
 def getInstrument(id:Long): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "instrument/getInstrument/id/" + implicitly[PathBindable[Long]].unbind("id", id) + "/json")
 }
                         
 
-// @LINE:27
+// @LINE:29
 def addInstrument(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "instrument/addInstrument")
 }
                         
 
-// @LINE:28
+// @LINE:30
 def updateInstrumentById(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "instrument/updateInstrument/id/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:29
+// @LINE:31
 def deleteInstrument(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "instrument/deleteInstrument/id/" + implicitly[PathBindable[Long]].unbind("id", id))
@@ -116,59 +116,59 @@ def deleteInstrument(id:Long): Call = {
 }
                           
 
+// @LINE:57
+// @LINE:56
 // @LINE:55
 // @LINE:54
 // @LINE:53
 // @LINE:52
 // @LINE:51
-// @LINE:50
-// @LINE:49
 class ReverseUserController {
 
 
-// @LINE:50
+// @LINE:52
 def addUser(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "users/add")
 }
                         
 
-// @LINE:49
+// @LINE:51
 def getUser(id:Long): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "users/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:51
+// @LINE:53
 def updateUser(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "users/update/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:53
+// @LINE:55
 def getAllUsers(): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "users/getAllUsers/json")
 }
                         
 
-// @LINE:52
+// @LINE:54
 def deleteUser(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "users/delete/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:55
+// @LINE:57
 def deleteUserByUserNameandPassword(userName:String, password:String): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "users/delete/userName/" + implicitly[PathBindable[String]].unbind("userName", dynamicString(userName)) + "/password/" + implicitly[PathBindable[String]].unbind("password", dynamicString(password)))
 }
                         
 
-// @LINE:54
+// @LINE:56
 def isUserValid(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "users/isUserValid")
@@ -178,59 +178,59 @@ def isUserValid(): Call = {
 }
                           
 
+// @LINE:48
+// @LINE:47
 // @LINE:46
 // @LINE:45
 // @LINE:44
 // @LINE:43
 // @LINE:42
-// @LINE:41
-// @LINE:40
 class ReverseParameterController {
 
 
-// @LINE:40
+// @LINE:42
 def getAllParameters(): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "parameter/getAllParameters/json")
 }
                         
 
-// @LINE:42
+// @LINE:44
 def getParameterById(id:Long): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "parameter/getParameter/id/" + implicitly[PathBindable[Long]].unbind("id", id) + "/json")
 }
                         
 
-// @LINE:44
+// @LINE:46
 def updateParameterById(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "parameter/updateParameter/id/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:41
+// @LINE:43
 def getParameterByName(id:Long, name:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "parameter/getParameter/service/" + implicitly[PathBindable[Long]].unbind("id", id) + "/name/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)) + "/json")
 }
                         
 
-// @LINE:45
+// @LINE:47
 def updateParameterByName(oldName:String): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "parameter/updateParameter/name/" + implicitly[PathBindable[String]].unbind("oldName", dynamicString(oldName)))
 }
                         
 
-// @LINE:46
+// @LINE:48
 def deleteParameterByName(id:Long, name:String): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "parameter/deleteParameter/service/" + implicitly[PathBindable[Long]].unbind("id", id) + "/name/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
 }
                         
 
-// @LINE:43
+// @LINE:45
 def addParameter(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "parameter/addParameter")
@@ -240,51 +240,51 @@ def addParameter(): Call = {
 }
                           
 
+// @LINE:39
+// @LINE:38
 // @LINE:37
 // @LINE:36
 // @LINE:35
 // @LINE:34
-// @LINE:33
-// @LINE:32
 class ReverseDatasetController {
 
 
-// @LINE:33
+// @LINE:35
 def getDataset(id:Long): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "dataset/getDataset/id/" + implicitly[PathBindable[Long]].unbind("id", id) + "/json")
 }
                         
 
-// @LINE:32
+// @LINE:34
 def getAllDatasets(): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "dataset/getAllDatasets/json")
 }
                         
 
-// @LINE:37
+// @LINE:39
 def queryDatasets(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "dataset/queryDataset")
 }
                         
 
-// @LINE:36
+// @LINE:38
 def deleteDataset(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "dataset/deleteDataset/id/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:34
+// @LINE:36
 def addDataset(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "dataset/addDataset")
 }
                         
 
-// @LINE:35
+// @LINE:37
 def updateDatasetById(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "dataset/updateDataset/id/" + implicitly[PathBindable[Long]].unbind("id", id))
@@ -294,13 +294,13 @@ def updateDatasetById(id:Long): Call = {
 }
                           
 
+// @LINE:24
+// @LINE:23
 // @LINE:22
 // @LINE:21
 // @LINE:20
 // @LINE:19
-// @LINE:18
 // @LINE:17
-// @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
@@ -317,7 +317,7 @@ def getAllClimateServicesOrderByCreateTime(): Call = {
 }
                         
 
-// @LINE:21
+// @LINE:23
 def deleteClimateServiceById(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "climateService/deleteClimateService/id/" + implicitly[PathBindable[Long]].unbind("id", id))
@@ -331,14 +331,14 @@ def getAllClimateServicesOrderByCount(): Call = {
 }
                         
 
-// @LINE:18
+// @LINE:20
 def addServiceEntry(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "climateService/addServiceEntry")
 }
                         
 
-// @LINE:16
+// @LINE:17
 def addClimateService(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "climateService/addClimateService")
@@ -359,7 +359,7 @@ def getClimateService(name:String): Call = {
 }
                         
 
-// @LINE:19
+// @LINE:21
 def updateClimateServiceById(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "climateService/updateClimateService/id/" + implicitly[PathBindable[Long]].unbind("id", id))
@@ -380,21 +380,21 @@ def getAllClimateServicesOrderByLatestAccessTime(): Call = {
 }
                         
 
-// @LINE:17
+// @LINE:19
 def getAllServiceEntries(): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
    Call("GET", _prefix + { _defaultPrefix } + "climateService/getAllServiceEntries/json")
 }
                         
 
-// @LINE:20
+// @LINE:22
 def updateClimateServiceByName(oldName:String): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "climateService/updateClimateService/name/" + implicitly[PathBindable[String]].unbind("oldName", dynamicString(oldName)))
 }
                         
 
-// @LINE:22
+// @LINE:24
 def deleteClimateServiceByName(name:String): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "climateService/deleteClimateService/name/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
@@ -407,39 +407,39 @@ def deleteClimateServiceByName(name:String): Call = {
                   
 
 
-// @LINE:58
+// @LINE:60
+// @LINE:57
+// @LINE:56
 // @LINE:55
 // @LINE:54
 // @LINE:53
 // @LINE:52
 // @LINE:51
-// @LINE:50
-// @LINE:49
+// @LINE:48
+// @LINE:47
 // @LINE:46
 // @LINE:45
 // @LINE:44
 // @LINE:43
 // @LINE:42
-// @LINE:41
-// @LINE:40
+// @LINE:39
+// @LINE:38
 // @LINE:37
 // @LINE:36
 // @LINE:35
 // @LINE:34
-// @LINE:33
-// @LINE:32
+// @LINE:31
+// @LINE:30
 // @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
-// @LINE:25
+// @LINE:24
+// @LINE:23
 // @LINE:22
 // @LINE:21
 // @LINE:20
 // @LINE:19
-// @LINE:18
 // @LINE:17
-// @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
@@ -449,11 +449,11 @@ def deleteClimateServiceByName(name:String): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
-// @LINE:58
+// @LINE:60
 class ReverseAssets {
 
 
-// @LINE:58
+// @LINE:60
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -467,15 +467,15 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:31
+// @LINE:30
 // @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
-// @LINE:25
 class ReverseInstrumentController {
 
 
-// @LINE:25
+// @LINE:27
 def getAllInstruments : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.InstrumentController.getAllInstruments",
    """
@@ -486,7 +486,7 @@ def getAllInstruments : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:26
+// @LINE:28
 def getInstrument : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.InstrumentController.getInstrument",
    """
@@ -497,7 +497,7 @@ def getInstrument : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:27
+// @LINE:29
 def addInstrument : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.InstrumentController.addInstrument",
    """
@@ -508,7 +508,7 @@ def addInstrument : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:28
+// @LINE:30
 def updateInstrumentById : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.InstrumentController.updateInstrumentById",
    """
@@ -519,7 +519,7 @@ def updateInstrumentById : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:29
+// @LINE:31
 def deleteInstrument : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.InstrumentController.deleteInstrument",
    """
@@ -533,17 +533,17 @@ def deleteInstrument : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:57
+// @LINE:56
 // @LINE:55
 // @LINE:54
 // @LINE:53
 // @LINE:52
 // @LINE:51
-// @LINE:50
-// @LINE:49
 class ReverseUserController {
 
 
-// @LINE:50
+// @LINE:52
 def addUser : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.addUser",
    """
@@ -554,7 +554,7 @@ def addUser : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:49
+// @LINE:51
 def getUser : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.getUser",
    """
@@ -565,7 +565,7 @@ def getUser : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:51
+// @LINE:53
 def updateUser : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.updateUser",
    """
@@ -576,7 +576,7 @@ def updateUser : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:53
+// @LINE:55
 def getAllUsers : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.getAllUsers",
    """
@@ -587,7 +587,7 @@ def getAllUsers : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:52
+// @LINE:54
 def deleteUser : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.deleteUser",
    """
@@ -598,7 +598,7 @@ def deleteUser : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:55
+// @LINE:57
 def deleteUserByUserNameandPassword : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.deleteUserByUserNameandPassword",
    """
@@ -609,7 +609,7 @@ def deleteUserByUserNameandPassword : JavascriptReverseRoute = JavascriptReverse
 )
                         
 
-// @LINE:54
+// @LINE:56
 def isUserValid : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.isUserValid",
    """
@@ -623,17 +623,17 @@ def isUserValid : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:48
+// @LINE:47
 // @LINE:46
 // @LINE:45
 // @LINE:44
 // @LINE:43
 // @LINE:42
-// @LINE:41
-// @LINE:40
 class ReverseParameterController {
 
 
-// @LINE:40
+// @LINE:42
 def getAllParameters : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ParameterController.getAllParameters",
    """
@@ -644,7 +644,7 @@ def getAllParameters : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:42
+// @LINE:44
 def getParameterById : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ParameterController.getParameterById",
    """
@@ -655,7 +655,7 @@ def getParameterById : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:44
+// @LINE:46
 def updateParameterById : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ParameterController.updateParameterById",
    """
@@ -666,7 +666,7 @@ def updateParameterById : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:41
+// @LINE:43
 def getParameterByName : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ParameterController.getParameterByName",
    """
@@ -677,7 +677,7 @@ def getParameterByName : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:45
+// @LINE:47
 def updateParameterByName : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ParameterController.updateParameterByName",
    """
@@ -688,7 +688,7 @@ def updateParameterByName : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:46
+// @LINE:48
 def deleteParameterByName : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ParameterController.deleteParameterByName",
    """
@@ -699,7 +699,7 @@ def deleteParameterByName : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:43
+// @LINE:45
 def addParameter : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ParameterController.addParameter",
    """
@@ -713,16 +713,16 @@ def addParameter : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:39
+// @LINE:38
 // @LINE:37
 // @LINE:36
 // @LINE:35
 // @LINE:34
-// @LINE:33
-// @LINE:32
 class ReverseDatasetController {
 
 
-// @LINE:33
+// @LINE:35
 def getDataset : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.getDataset",
    """
@@ -733,7 +733,7 @@ def getDataset : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:32
+// @LINE:34
 def getAllDatasets : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.getAllDatasets",
    """
@@ -744,7 +744,7 @@ def getAllDatasets : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:37
+// @LINE:39
 def queryDatasets : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.queryDatasets",
    """
@@ -755,7 +755,7 @@ def queryDatasets : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:36
+// @LINE:38
 def deleteDataset : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.deleteDataset",
    """
@@ -766,7 +766,7 @@ def deleteDataset : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:34
+// @LINE:36
 def addDataset : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.addDataset",
    """
@@ -777,7 +777,7 @@ def addDataset : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:35
+// @LINE:37
 def updateDatasetById : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.updateDatasetById",
    """
@@ -791,13 +791,13 @@ def updateDatasetById : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:24
+// @LINE:23
 // @LINE:22
 // @LINE:21
 // @LINE:20
 // @LINE:19
-// @LINE:18
 // @LINE:17
-// @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
@@ -818,7 +818,7 @@ def getAllClimateServicesOrderByCreateTime : JavascriptReverseRoute = Javascript
 )
                         
 
-// @LINE:21
+// @LINE:23
 def deleteClimateServiceById : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.deleteClimateServiceById",
    """
@@ -840,7 +840,7 @@ def getAllClimateServicesOrderByCount : JavascriptReverseRoute = JavascriptRever
 )
                         
 
-// @LINE:18
+// @LINE:20
 def addServiceEntry : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.addServiceEntry",
    """
@@ -851,7 +851,7 @@ def addServiceEntry : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:16
+// @LINE:17
 def addClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.addClimateService",
    """
@@ -884,7 +884,7 @@ def getClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:19
+// @LINE:21
 def updateClimateServiceById : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.updateClimateServiceById",
    """
@@ -917,7 +917,7 @@ def getAllClimateServicesOrderByLatestAccessTime : JavascriptReverseRoute = Java
 )
                         
 
-// @LINE:17
+// @LINE:19
 def getAllServiceEntries : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.getAllServiceEntries",
    """
@@ -928,7 +928,7 @@ def getAllServiceEntries : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:20
+// @LINE:22
 def updateClimateServiceByName : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.updateClimateServiceByName",
    """
@@ -939,7 +939,7 @@ def updateClimateServiceByName : JavascriptReverseRoute = JavascriptReverseRoute
 )
                         
 
-// @LINE:22
+// @LINE:24
 def deleteClimateServiceByName : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.deleteClimateServiceByName",
    """
@@ -956,39 +956,39 @@ def deleteClimateServiceByName : JavascriptReverseRoute = JavascriptReverseRoute
         
 
 
-// @LINE:58
+// @LINE:60
+// @LINE:57
+// @LINE:56
 // @LINE:55
 // @LINE:54
 // @LINE:53
 // @LINE:52
 // @LINE:51
-// @LINE:50
-// @LINE:49
+// @LINE:48
+// @LINE:47
 // @LINE:46
 // @LINE:45
 // @LINE:44
 // @LINE:43
 // @LINE:42
-// @LINE:41
-// @LINE:40
+// @LINE:39
+// @LINE:38
 // @LINE:37
 // @LINE:36
 // @LINE:35
 // @LINE:34
-// @LINE:33
-// @LINE:32
+// @LINE:31
+// @LINE:30
 // @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
-// @LINE:25
+// @LINE:24
+// @LINE:23
 // @LINE:22
 // @LINE:21
 // @LINE:20
 // @LINE:19
-// @LINE:18
 // @LINE:17
-// @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
@@ -998,11 +998,11 @@ def deleteClimateServiceByName : JavascriptReverseRoute = JavascriptReverseRoute
 package controllers.ref {
 
 
-// @LINE:58
+// @LINE:60
 class ReverseAssets {
 
 
-// @LINE:58
+// @LINE:60
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -1011,39 +1011,39 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:31
+// @LINE:30
 // @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
-// @LINE:25
 class ReverseInstrumentController {
 
 
-// @LINE:25
+// @LINE:27
 def getAllInstruments(format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.InstrumentController]).getAllInstruments(format), HandlerDef(this.getClass.getClassLoader, "", "controllers.InstrumentController", "getAllInstruments", Seq(classOf[String]), "GET", """ Instrument""", _prefix + """instrument/getAllInstruments/json""")
 )
                       
 
-// @LINE:26
+// @LINE:28
 def getInstrument(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.InstrumentController]).getInstrument(id, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.InstrumentController", "getInstrument", Seq(classOf[Long], classOf[String]), "GET", """""", _prefix + """instrument/getInstrument/id/$id<[^/]+>/json""")
 )
                       
 
-// @LINE:27
+// @LINE:29
 def addInstrument(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.InstrumentController]).addInstrument(), HandlerDef(this.getClass.getClassLoader, "", "controllers.InstrumentController", "addInstrument", Seq(), "POST", """""", _prefix + """instrument/addInstrument""")
 )
                       
 
-// @LINE:28
+// @LINE:30
 def updateInstrumentById(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.InstrumentController]).updateInstrumentById(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.InstrumentController", "updateInstrumentById", Seq(classOf[Long]), "PUT", """""", _prefix + """instrument/updateInstrument/id/$id<[^/]+>""")
 )
                       
 
-// @LINE:29
+// @LINE:31
 def deleteInstrument(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.InstrumentController]).deleteInstrument(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.InstrumentController", "deleteInstrument", Seq(classOf[Long]), "DELETE", """""", _prefix + """instrument/deleteInstrument/id/$id<[^/]+>""")
 )
@@ -1052,53 +1052,53 @@ def deleteInstrument(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.Han
 }
                           
 
+// @LINE:57
+// @LINE:56
 // @LINE:55
 // @LINE:54
 // @LINE:53
 // @LINE:52
 // @LINE:51
-// @LINE:50
-// @LINE:49
 class ReverseUserController {
 
 
-// @LINE:50
+// @LINE:52
 def addUser(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).addUser(), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "addUser", Seq(), "POST", """""", _prefix + """users/add""")
 )
                       
 
-// @LINE:49
+// @LINE:51
 def getUser(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).getUser(id, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "getUser", Seq(classOf[Long], classOf[String]), "GET", """ Users""", _prefix + """users/$id<[^/]+>""")
 )
                       
 
-// @LINE:51
+// @LINE:53
 def updateUser(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).updateUser(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "updateUser", Seq(classOf[Long]), "PUT", """""", _prefix + """users/update/$id<[^/]+>""")
 )
                       
 
-// @LINE:53
+// @LINE:55
 def getAllUsers(format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).getAllUsers(format), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "getAllUsers", Seq(classOf[String]), "GET", """""", _prefix + """users/getAllUsers/json""")
 )
                       
 
-// @LINE:52
+// @LINE:54
 def deleteUser(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).deleteUser(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "deleteUser", Seq(classOf[Long]), "DELETE", """""", _prefix + """users/delete/$id<[^/]+>""")
 )
                       
 
-// @LINE:55
+// @LINE:57
 def deleteUserByUserNameandPassword(userName:String, password:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).deleteUserByUserNameandPassword(userName, password), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "deleteUserByUserNameandPassword", Seq(classOf[String], classOf[String]), "DELETE", """""", _prefix + """users/delete/userName/$userName<[^/]+>/password/$password<[^/]+>""")
 )
                       
 
-// @LINE:54
+// @LINE:56
 def isUserValid(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.UserController]).isUserValid(), HandlerDef(this.getClass.getClassLoader, "", "controllers.UserController", "isUserValid", Seq(), "POST", """""", _prefix + """users/isUserValid""")
 )
@@ -1107,53 +1107,53 @@ def isUserValid(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:48
+// @LINE:47
 // @LINE:46
 // @LINE:45
 // @LINE:44
 // @LINE:43
 // @LINE:42
-// @LINE:41
-// @LINE:40
 class ReverseParameterController {
 
 
-// @LINE:40
+// @LINE:42
 def getAllParameters(format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ParameterController]).getAllParameters(format), HandlerDef(this.getClass.getClassLoader, "", "controllers.ParameterController", "getAllParameters", Seq(classOf[String]), "GET", """ Parameter""", _prefix + """parameter/getAllParameters/json""")
 )
                       
 
-// @LINE:42
+// @LINE:44
 def getParameterById(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ParameterController]).getParameterById(id, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.ParameterController", "getParameterById", Seq(classOf[Long], classOf[String]), "GET", """""", _prefix + """parameter/getParameter/id/$id<[^/]+>/json""")
 )
                       
 
-// @LINE:44
+// @LINE:46
 def updateParameterById(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ParameterController]).updateParameterById(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ParameterController", "updateParameterById", Seq(classOf[Long]), "PUT", """""", _prefix + """parameter/updateParameter/id/$id<[^/]+>""")
 )
                       
 
-// @LINE:41
+// @LINE:43
 def getParameterByName(id:Long, name:String, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ParameterController]).getParameterByName(id, name, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.ParameterController", "getParameterByName", Seq(classOf[Long], classOf[String], classOf[String]), "GET", """""", _prefix + """parameter/getParameter/service/$id<[^/]+>/name/$name<[^/]+>/json""")
 )
                       
 
-// @LINE:45
+// @LINE:47
 def updateParameterByName(oldName:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ParameterController]).updateParameterByName(oldName), HandlerDef(this.getClass.getClassLoader, "", "controllers.ParameterController", "updateParameterByName", Seq(classOf[String]), "PUT", """""", _prefix + """parameter/updateParameter/name/$oldName<[^/]+>""")
 )
                       
 
-// @LINE:46
+// @LINE:48
 def deleteParameterByName(id:Long, name:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ParameterController]).deleteParameterByName(id, name), HandlerDef(this.getClass.getClassLoader, "", "controllers.ParameterController", "deleteParameterByName", Seq(classOf[Long], classOf[String]), "DELETE", """""", _prefix + """parameter/deleteParameter/service/$id<[^/]+>/name/$name<[^/]+>""")
 )
                       
 
-// @LINE:43
+// @LINE:45
 def addParameter(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ParameterController]).addParameter(), HandlerDef(this.getClass.getClassLoader, "", "controllers.ParameterController", "addParameter", Seq(), "POST", """""", _prefix + """parameter/addParameter""")
 )
@@ -1162,46 +1162,46 @@ def addParameter(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:39
+// @LINE:38
 // @LINE:37
 // @LINE:36
 // @LINE:35
 // @LINE:34
-// @LINE:33
-// @LINE:32
 class ReverseDatasetController {
 
 
-// @LINE:33
+// @LINE:35
 def getDataset(id:Long, format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.DatasetController]).getDataset(id, format), HandlerDef(this.getClass.getClassLoader, "", "controllers.DatasetController", "getDataset", Seq(classOf[Long], classOf[String]), "GET", """""", _prefix + """dataset/getDataset/id/$id<[^/]+>/json""")
 )
                       
 
-// @LINE:32
+// @LINE:34
 def getAllDatasets(format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.DatasetController]).getAllDatasets(format), HandlerDef(this.getClass.getClassLoader, "", "controllers.DatasetController", "getAllDatasets", Seq(classOf[String]), "GET", """ Dataset""", _prefix + """dataset/getAllDatasets/json""")
 )
                       
 
-// @LINE:37
+// @LINE:39
 def queryDatasets(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.DatasetController]).queryDatasets(), HandlerDef(this.getClass.getClassLoader, "", "controllers.DatasetController", "queryDatasets", Seq(), "POST", """""", _prefix + """dataset/queryDataset""")
 )
                       
 
-// @LINE:36
+// @LINE:38
 def deleteDataset(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.DatasetController]).deleteDataset(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.DatasetController", "deleteDataset", Seq(classOf[Long]), "DELETE", """""", _prefix + """dataset/deleteDataset/id/$id<[^/]+>""")
 )
                       
 
-// @LINE:34
+// @LINE:36
 def addDataset(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.DatasetController]).addDataset(), HandlerDef(this.getClass.getClassLoader, "", "controllers.DatasetController", "addDataset", Seq(), "POST", """""", _prefix + """dataset/addDataset""")
 )
                       
 
-// @LINE:35
+// @LINE:37
 def updateDatasetById(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.DatasetController]).updateDatasetById(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.DatasetController", "updateDatasetById", Seq(classOf[Long]), "PUT", """""", _prefix + """dataset/updateDataset/id/$id<[^/]+>""")
 )
@@ -1210,13 +1210,13 @@ def updateDatasetById(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.Ha
 }
                           
 
+// @LINE:24
+// @LINE:23
 // @LINE:22
 // @LINE:21
 // @LINE:20
 // @LINE:19
-// @LINE:18
 // @LINE:17
-// @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
@@ -1232,7 +1232,7 @@ def getAllClimateServicesOrderByCreateTime(format:String): play.api.mvc.HandlerR
 )
                       
 
-// @LINE:21
+// @LINE:23
 def deleteClimateServiceById(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ClimateServiceController]).deleteClimateServiceById(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClimateServiceController", "deleteClimateServiceById", Seq(classOf[Long]), "DELETE", """""", _prefix + """climateService/deleteClimateService/id/$id<[^/]+>""")
 )
@@ -1244,13 +1244,13 @@ def getAllClimateServicesOrderByCount(format:String): play.api.mvc.HandlerRef[_]
 )
                       
 
-// @LINE:18
+// @LINE:20
 def addServiceEntry(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ClimateServiceController]).addServiceEntry(), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClimateServiceController", "addServiceEntry", Seq(), "POST", """""", _prefix + """climateService/addServiceEntry""")
 )
                       
 
-// @LINE:16
+// @LINE:17
 def addClimateService(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ClimateServiceController]).addClimateService(), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClimateServiceController", "addClimateService", Seq(), "POST", """""", _prefix + """climateService/addClimateService""")
 )
@@ -1268,7 +1268,7 @@ def getClimateService(name:String, format:String): play.api.mvc.HandlerRef[_] = 
 )
                       
 
-// @LINE:19
+// @LINE:21
 def updateClimateServiceById(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ClimateServiceController]).updateClimateServiceById(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClimateServiceController", "updateClimateServiceById", Seq(classOf[Long]), "PUT", """""", _prefix + """climateService/updateClimateService/id/$id<[^/]+>""")
 )
@@ -1286,19 +1286,19 @@ def getAllClimateServicesOrderByLatestAccessTime(format:String): play.api.mvc.Ha
 )
                       
 
-// @LINE:17
+// @LINE:19
 def getAllServiceEntries(format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ClimateServiceController]).getAllServiceEntries(format), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClimateServiceController", "getAllServiceEntries", Seq(classOf[String]), "GET", """""", _prefix + """climateService/getAllServiceEntries/json""")
 )
                       
 
-// @LINE:20
+// @LINE:22
 def updateClimateServiceByName(oldName:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ClimateServiceController]).updateClimateServiceByName(oldName), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClimateServiceController", "updateClimateServiceByName", Seq(classOf[String]), "PUT", """""", _prefix + """climateService/updateClimateService/name/$oldName<[^/]+>""")
 )
                       
 
-// @LINE:22
+// @LINE:24
 def deleteClimateServiceByName(name:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ClimateServiceController]).deleteClimateServiceByName(name), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClimateServiceController", "deleteClimateServiceByName", Seq(classOf[String]), "DELETE", """""", _prefix + """climateService/deleteClimateService/name/$name<[^/]+>""")
 )
