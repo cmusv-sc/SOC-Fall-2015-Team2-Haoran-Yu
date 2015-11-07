@@ -88,7 +88,7 @@ public class ClimateServiceController extends Controller {
 			String newClimateServiceName = originalClimateServiceName.replace(' ', '-');
 
 			if (newClimateServiceName != null && !newClimateServiceName.isEmpty()) {
-				jsonData.put("name", newClimateServiceName);
+				jsonData.put("userName", newClimateServiceName);
 			}
 
 			jsonData.put("password", dc.field("password").value());
