@@ -51,59 +51,55 @@ public class UserController extends Controller {
 	}
 
 	public Result addUser() {
-		FileWriter fw = null;
-		try {
-            fw = new FileWriter(new File("log.txt"));
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        try{
 
-		System.out.println("backend!!");
-		JsonNode json = request().body().asJson();
-		if (json == null) {
-			fw.write("User not created, expecting Json data");
-			return badRequest("User not created, expecting Json data");
-		}
+        	FileWriter fw = new FileWriter(new File("log.txt"));
 
-		// Parse JSON file
-		String userName = json.path("userName").asText();
-		System.out.println("backend username: " + userName);
-		String password = json.path("password").asText();
-		String firstName = json.path("firstName").asText();
-		String lastName = json.path("lastName").asText();
-		String middleInitial = json.path("middleInitial").asText();
-	    String affiliation = json.path("affiliation").asText();
-	    String title = json.path("title").asText();
-	    String email = json.path("email").asText();
-	    String mailingAddress = json.path("mailingAddress").asText();
-	    String phoneNumber = json.path("phoneNumber").asText();
-	    String faxNumber = json.path("faxNumber").asText();
-	    String researchFields = json.path("researchFields").asText();
-	    String highestDegree = json.path("highestDegree").asText();
 
-		try {
-			if (userRepository.findByUserName(userName).size()>0) {
-				fw.write("UserName has been used: " + userName);
-				// System.out.println("UserName has been used: " + userName);
-				return badRequest("UserName has been used");
+			System.out.println("backend!!");
+			JsonNode json = request().body().asJson();
+			if (json == null) {
+				fw.write("User not created, expecting Json data");
+				return badRequest("User not created, expecting Json data");
 			}
-			User user = new User(userName, password, firstName, lastName, middleInitial, affiliation, title, email, mailingAddress, phoneNumber, faxNumber, researchFields, highestDegree);	
-			userRepository.save(user);
-			fw.write("User saved: " + user.getId());
-			// System.out.println("User saved: " + user.getId());
-			return created(new Gson().toJson(user.getId()));
-		} catch (PersistenceException pe) {
-			pe.printStackTrace();
-			System.out.println("User not saved: " + firstName + " " + lastName);
-			return badRequest("User not saved: " + firstName + " " + lastName);
-		}
 
-		try{
-			fw.close();
+			// Parse JSON file
+			String userName = json.path("userName").asText();
+			System.out.println("backend username: " + userName);
+			String password = json.path("password").asText();
+			String firstName = json.path("firstName").asText();
+			String lastName = json.path("lastName").asText();
+			String middleInitial = json.path("middleInitial").asText();
+		    String affiliation = json.path("affiliation").asText();
+		    String title = json.path("title").asText();
+		    String email = json.path("email").asText();
+		    String mailingAddress = json.path("mailingAddress").asText();
+		    String phoneNumber = json.path("phoneNumber").asText();
+		    String faxNumber = json.path("faxNumber").asText();
+		    String researchFields = json.path("researchFields").asText();
+		    String highestDegree = json.path("highestDegree").asText();
+
+			try {
+				if (userRepository.findByUserName(userName).size()>0) {
+					fw.write("UserName has been used: " + userName);
+					// System.out.println("UserName has been used: " + userName);
+					return badRequest("UserName has been used");
+				}
+				User user = new User(userName, password, firstName, lastName, middleInitial, affiliation, title, email, mailingAddress, phoneNumber, faxNumber, researchFields, highestDegree);	
+				userRepository.save(user);
+				fw.write("User saved: " + user.getId());
+				// System.out.println("User saved: " + user.getId());
+				return created(new Gson().toJson(user.getId()));
+			} catch (PersistenceException pe) {
+				pe.printStackTrace();
+				System.out.println("User not saved: " + firstName + " " + lastName);
+				return badRequest("User not saved: " + firstName + " " + lastName);
+			}
+
 		}catch(Exception e){
 
 		}
+
 
 	}
 
