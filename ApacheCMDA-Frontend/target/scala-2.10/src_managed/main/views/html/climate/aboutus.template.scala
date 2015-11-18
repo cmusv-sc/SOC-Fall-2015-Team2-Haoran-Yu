@@ -89,7 +89,6 @@ Seq[Any](format.raw/*18.19*/("""
    <p>Zhiyu Lin</p>  
    <p>Jian Jiao</p>
    <p>Juanchen Li</p>
-   <p>test 2</p>
    <br>
    <h3><strong>CMU Former Contributors</strong></h3>
    <p>Pinchao Wang</p>
@@ -133,9 +132,9 @@ Seq[Any](format.raw/*18.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Nov 06 23:51:46 EST 2015
-                    SOURCE: /Users/Tongyun/Documents/SOC-Fall-2015-Team2-Haoran-Yu-60e5416fb2ffd2de3b1989acc6e8036026d5680d/ApacheCMDA-Frontend/app/views/climate/aboutus.scala.html
-                    HASH: 7989929a756e429443e05c97964858862a4b16ef
+                    DATE: Tue Nov 17 21:57:03 EST 2015
+                    SOURCE: /Users/Tongyun/Desktop/SOC-Fall-2015-master/ApacheCMDA-Frontend/app/views/climate/aboutus.scala.html
+                    HASH: a0e5135b7554c04a0e56e57b12e5e053ec8c0d01
                     MATRIX: 3179->1205|3291->1222|3329->1225|3354->1241|3394->1243
                     LINES: 56->18|59->18|61->20|61->20|61->20
                     -- GENERATED --

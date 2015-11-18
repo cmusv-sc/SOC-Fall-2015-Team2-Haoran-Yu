@@ -25,7 +25,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
+import java.util.*;
 import models.*;
 import util.Common;
 import util.Constants;
@@ -395,6 +395,28 @@ public class ClimateServiceController extends Controller {
             result = new Gson().toJson(climateServices);
         }
 
+        return ok(result);
+    }
+
+    // get rates   (need implement link to database)
+    public Result getAllClimateServicesRate(String format){
+    	List<ClimateService> climateServices = new ArrayList<ClimateService>();
+    	for(int i = 0; i < 5; i++){
+    		ClimateService c = new ClimateService();
+    		Random r = new Random();
+    		c.setRate(String.valueOf(r.nextInt(6)));
+    		climateServices.add(c);
+    	}
+    	// // Iterable<ClimateService> climateServices = climateServiceRepository.getClimateServiceRate();
+     //    Iterable<ClimateService> climateServices = list;
+     //    if (climateServices == null) {
+     //        System.out.println("No climate service found");
+     //    }
+
+        String result = new String();
+        if (format.equals("json")) {
+            result = new Gson().toJson(climateServices);
+        }
         return ok(result);
     }
 

@@ -20,7 +20,6 @@ package controllers;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import models.metadata.ClimateService;
-import models.metadata.User;
 import play.Logger;
 import play.data.Form;
 import play.libs.Json;
@@ -46,9 +45,6 @@ public class ClimateServiceController extends Controller {
 	final static Form<ClimateService> climateServiceForm = Form
 			.form(ClimateService.class);
 
-	/* user form*/		
-	final static Form<User> userForm = Form.form(User.class);
-
 	public static Result home(String email, String vfile, String dataset) {
 		return ok(home.render(email, vfile, dataset));
 	}
@@ -64,49 +60,6 @@ public class ClimateServiceController extends Controller {
 	public static Result climateServices() {
 		return ok(climateServices.render(ClimateService.all(),
 				climateServiceForm));
-	}
-
-	public static Result login(){
-               return ok(login.render());
-    }
-     
-    public static Result register(){
-    	return ok(register.render(userForm));
-    }     
-
- //    public static Result register(){
- //               return ok(register.render());
-	// }
-	// 
-	public static Result userRegister(){
-		Form<User> dc = userForm.bindFromRequest();
-		ObjectNode jsonData = Json.newObject();
-		try {
-
-			String originalClimateServiceName = dc.field("userName").value();
-			System.out.println("user name: " + dc.field("userName").value());
-			String newClimateServiceName = originalClimateServiceName.replace(' ', '-');
-
-			if (newClimateServiceName != null && !newClimateServiceName.isEmpty()) {
-				jsonData.put("userName", newClimateServiceName);
-			}
-
-			jsonData.put("password", dc.field("password").value());
-			jsonData.put("firstName", dc.field("firstName").value());
-			jsonData.put("lastName", dc.field("lastName").value());
-			jsonData.put("email", dc.field("email").value());
-			JsonNode response = User.create(jsonData);
-			Application.flashMsg(response);
-		} catch (IllegalStateException e) {
-			e.printStackTrace();
-			Application.flashMsg(APICall
-					.createResponse(ResponseType.CONVERSIONERROR));
-		} catch (Exception e) {
-			e.printStackTrace();
-			Application.flashMsg(APICall.createResponse(ResponseType.UNKNOWN));
-		}
-		// return redirect("/climate/climateServices");
-		return redirect("/");
 	}
 	
 	public static Result mostRecentlyAddedClimateServices() {

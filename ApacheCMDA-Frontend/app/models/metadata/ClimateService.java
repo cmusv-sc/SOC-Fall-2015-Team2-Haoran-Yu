@@ -34,6 +34,19 @@ public class ClimateService {
 	private String version;
 	private String rootservice;
 	private String photo;
+	private String rate;
+
+	public String getRate(){
+		// Random r = new Random();
+		// return String.valueOf(r.nextInt(101));
+		double rate = getAllRates();
+		setRate(String.valueOf(rate));
+		return this.rate;
+	}
+
+	private void setRate(String rate){
+		this.rate = rate;
+	}
 
 	public String getScenario() {
 		return scenario;
@@ -58,6 +71,8 @@ public class ClimateService {
 	public void setRootservice(String rootservice) {
 		this.rootservice = rootservice;
 	}
+
+	private static final String GET_CLIMATE_RATE_CALL = Constants.NEW_BACKEND+"climateService/getAllClimateServicesRate/json";
 
 	private static final String GET_CLIMATE_SERVICES_CALL = Constants.NEW_BACKEND+"climateService/getAllClimateServices/json";
 
@@ -130,6 +145,32 @@ public class ClimateService {
 				return element;
 		}
 		return null;
+	}
+
+    // get rates for a service
+	public static double getAllRates(){
+		System.out.println("in get all rates");
+		List<ClimateService> climateServices = new ArrayList<ClimateService>();
+
+		JsonNode climateServicesNode = APICall
+				.callAPI(GET_CLIMATE_RATE_CALL);
+         
+        System.out.println("return from backend"); 
+	    if (climateServicesNode == null || climateServicesNode.has("error")
+				|| !climateServicesNode.isArray()) {
+	    	System.out.println("error!"); 
+			return 0.0;
+		}
+
+        System.out.println("no error"); 
+		int size = climateServicesNode.size();
+		int rates = 0;
+		for (int i = 0; i < size; i++) {
+			JsonNode json = climateServicesNode.path(i);
+			int rate = Integer.parseInt(json.path("rate").asText());
+			rates += rate; 
+		}
+		return (double)rates / (double)size;
 	}
 
 	/**

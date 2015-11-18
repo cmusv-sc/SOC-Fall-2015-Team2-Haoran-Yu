@@ -1,0 +1,71 @@
+@(commentForm: play.data.Form[models.Comment])
+@import helper._
+
+
+@main("Comment") {  
+	
+	@helper.form(action = routes.Application.createNewComment) {
+<div class="container"
+	style="background-image: url('@routes.Assets.at("images/login-background.jpg")'); height: 90vh; background-size: 100%; ">
+	<div
+		class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+		<form class="form-signin">
+			<h1 class="form-signin-heading" align="center">Comment And Rating</h1>
+
+			<div class="row">
+					<div class="form-group">
+						<div class="form-group">
+						Service Name: 
+							<select id="drop_service" name="drop_service" class="form-control" value='@commentForm("serviceName").value'>
+		  						<option value="2-D-Variable-Map">2-D-Variable-Map</option>
+		  						<option value="2-D-Variable-Zonal-Mean">2-D-Variable-Zonal-Mean</option>
+		  						<option value="2-D-Variable-Time-Series">2-D-Variable-Time-Series</option>
+		  						<option value="3-D-Variable-2-D-Slice">3-D-Variable-2-D-Slice</option>
+		  						<option value="3-D-Variable-Zonal-Mean">3-D-Variable-Zonal-Mean</option>
+		  						<option value="3-D-Variable-Average-Vertical-Profile">3-D-Variable-Average-Vertical-Profile</option>
+		  						<option value="Scatter-and-Histogram-Plot-of-Two-Variables">Scatter-and-Histogram-Plot-of-Two-Variables</option>
+		  						<option value="Difference-Plot-of-Two-Time-Averaged-Variables">Difference-Plot-of-Two-Time-Averaged-Variables</option>
+		  						<option value="Conditional-Sampling-with-One-Variable">Conditional-Sampling-with-One-Variable</option>
+		  						<option value="Conditional-Sampling-with-Two-Variables">Conditional-Sampling-with-Two-Variables</option>
+		  						<option value="Time-Lagged-Correlation-Map-of-Two-Variables">Time-Lagged-Correlation-Map-of-Two-Variables</option>
+		  						<option value="Regrid-and-Download">Regrid-and-Download</option>
+							</select>
+						</div>
+					</div>
+			</div>
+
+			<div class="row">
+					<div class="form-group">
+						Rating: 
+						<select id="drop_rating" name="drop_rating" class="form-control" value='@commentForm("rate").value'>
+	  						<option value="5">5</option>
+	  						<option value="4">4</option>
+	  						<option value="3">3</option>
+	  						<option value="2">2</option>
+	  						<option value="1">1</option>
+						</select>
+					</div>
+			</div>
+
+
+			<div class="row">
+					<div class="form-group">
+						<input type="text" name="comment" id="comment"
+							class="form-control" placeholder="Comment Here"
+							value='@commentForm("comment").value'>
+					</div>
+			</div>
+
+
+			<div class="actions row">
+					<input type="submit" class="btn btn-primary btn-block"
+						value="Submit" id="Submit">
+			</div>
+
+			
+		</form>
+	</div>
+</div>
+
+} 
+}

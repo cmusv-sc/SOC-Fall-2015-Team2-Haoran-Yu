@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="echo-trace-compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, echo-trace-compile, echo-trace-test, echo-weave, echo-sigar, jacoco"
-		date="20151106235117"/>
+		date="20151117215636"/>
 	<dependencies>
 		<module organisation="org.hibernate" name="hibernate-c3p0">
 			<revision name="4.3.7.Final" status="release" pubdate="20141030090711" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hibernate.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="78">

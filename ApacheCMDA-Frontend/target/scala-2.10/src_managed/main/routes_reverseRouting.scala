@@ -1,6 +1,6 @@
-// @SOURCE:/Users/Tongyun/Documents/SOC-Fall-2015-Team2-Haoran-Yu-60e5416fb2ffd2de3b1989acc6e8036026d5680d/ApacheCMDA-Frontend/conf/routes
-// @HASH:f29d163d719cba268231c9c55b338c4ff64cfea0
-// @DATE:Fri Nov 06 23:51:45 EST 2015
+// @SOURCE:/Users/Tongyun/Desktop/SOC-Fall-2015-master/ApacheCMDA-Frontend/conf/routes
+// @HASH:b02d5b7b482a6d3f2f4280e97df1c7300a4831f9
+// @DATE:Wed Nov 18 02:07:59 EST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -14,28 +14,35 @@ import Router.queryString
 
 
 // @LINE:48
+// @LINE:45
 // @LINE:44
 // @LINE:43
-// @LINE:42
+// @LINE:41
+// @LINE:40
 // @LINE:39
+// @LINE:38
 // @LINE:37
+// @LINE:36
 // @LINE:35
 // @LINE:34
 // @LINE:33
+// @LINE:32
 // @LINE:31
-// @LINE:29
-// @LINE:28
+// @LINE:30
 // @LINE:27
 // @LINE:26
-// @LINE:25
-// @LINE:24
+// @LINE:23
+// @LINE:22
 // @LINE:21
 // @LINE:20
-// @LINE:17
+// @LINE:19
 // @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
+// @LINE:12
+// @LINE:11
+// @LINE:10
 // @LINE:9
 // @LINE:8
 // @LINE:7
@@ -55,18 +62,18 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:21
-// @LINE:20
+// @LINE:27
+// @LINE:26
 class ReverseAboutusController {
     
 
-// @LINE:21
+// @LINE:27
 def aboutProject(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "aboutProject")
 }
                                                 
 
-// @LINE:20
+// @LINE:26
 def aboutUs(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "aboutus")
 }
@@ -75,39 +82,39 @@ def aboutUs(): Call = {
 }
                           
 
-// @LINE:17
-// @LINE:16
-// @LINE:15
-// @LINE:14
-// @LINE:13
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
 class ReverseBugReportController {
     
 
-// @LINE:13
+// @LINE:19
 def reports(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "bugs")
 }
                                                 
 
-// @LINE:17
+// @LINE:23
 def solveReport(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "solve/report")
 }
                                                 
 
-// @LINE:16
+// @LINE:22
 def deleteReport(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "delete/report")
 }
                                                 
 
-// @LINE:15
+// @LINE:21
 def list(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "bug/list")
 }
                                                 
 
-// @LINE:14
+// @LINE:20
 def newReport(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "newReport")
 }
@@ -116,25 +123,94 @@ def newReport(): Call = {
 }
                           
 
+// @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
+// @LINE:12
+// @LINE:11
+// @LINE:10
+// @LINE:9
+// @LINE:8
+class ReverseApplication {
+    
+
+// @LINE:16
+def createNewComment(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "createNewComment")
+}
+                                                
+
+// @LINE:12
+def createNewUser(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "createNewUser")
+}
+                                                
+
+// @LINE:13
+def createSuccess(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "createSuccess")
+}
+                                                
+
+// @LINE:14
+def isEmailExisted(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "isEmailExisted")
+}
+                                                
+
+// @LINE:11
+def signup(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "signup")
+}
+                                                
+
+// @LINE:9
+def logout(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "logout")
+}
+                                                
+
+// @LINE:15
+def comment(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "comment")
+}
+                                                
+
+// @LINE:10
+def authenticate(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "authenticate")
+}
+                                                
+
+// @LINE:8
+def login(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "login")
+}
+                                                
+    
+}
+                          
+
+// @LINE:45
 // @LINE:44
 // @LINE:43
-// @LINE:42
 class ReverseDatasetController {
     
 
-// @LINE:44
+// @LINE:45
 def getSearchResult(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/getSearchResult")
 }
                                                 
 
-// @LINE:43
+// @LINE:44
 def searchDataset(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/searchDataSet")
 }
                                                 
 
-// @LINE:42
+// @LINE:43
 def datasetList(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/datasets")
 }
@@ -143,120 +219,104 @@ def datasetList(): Call = {
 }
                           
 
+// @LINE:41
+// @LINE:40
 // @LINE:39
+// @LINE:38
 // @LINE:37
+// @LINE:36
 // @LINE:35
 // @LINE:34
 // @LINE:33
+// @LINE:32
 // @LINE:31
-// @LINE:29
-// @LINE:28
-// @LINE:27
-// @LINE:26
-// @LINE:25
-// @LINE:24
-// @LINE:9
-// @LINE:8
+// @LINE:30
 // @LINE:7
 // @LINE:6
 class ReverseClimateServiceController {
     
 
-// @LINE:37
+// @LINE:40
 def addClimateServices(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/new/climateServices")
 }
                                                 
 
-// @LINE:27
+// @LINE:33
 def mostRecentlyAddedClimateServices(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/mostRecentlyAddedClimateServices")
 }
                                                 
 
-// @LINE:35
+// @LINE:39
 def editClimateService(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "climate/edit/climateServices")
 }
                                                 
 
-// @LINE:29
+// @LINE:35
 def mostPopularClimateServices(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/mostPopularClimateServices")
 }
                                                 
 
-// @LINE:25
+// @LINE:31
 def tutorial(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/tutorial")
 }
                                                 
 
-// @LINE:9
-def userRegister(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "register")
-}
-                                                
-
-// @LINE:39
+// @LINE:41
 def oneService(url:String = null): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/oneService" + queryString(List(if(url == null) None else Some(implicitly[QueryStringBindable[String]].unbind("url", url)))))
 }
                                                 
 
-// @LINE:34
+// @LINE:38
 def downloadClimateService(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "climate/download/climateServices")
 }
                                                 
 
-// @LINE:8
-def register(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "register")
-}
-                                                
-
-// @LINE:28
+// @LINE:34
 def mostRecentlyUsedClimateServices(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/mostRecentlyUsedClimateServices")
 }
                                                 
 
-// @LINE:26
+// @LINE:32
 def climateServices(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/climateServices")
 }
                                                 
 
-// @LINE:31
+// @LINE:36
 def newClimateService(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "climate/new/climateServices")
 }
                                                 
 
-// @LINE:24
+// @LINE:30
 // @LINE:7
+// @LINE:6
 def home(email:String = null, vfile:String = null, dataset:String = null): Call = {
    (email: @unchecked, vfile: @unchecked, dataset: @unchecked) match {
-// @LINE:7
+// @LINE:6
 case (email, vfile, dataset) if true => Call("GET", _prefix + { _defaultPrefix } + "home" + queryString(List(if(email == null) None else Some(implicitly[QueryStringBindable[String]].unbind("email", email)), if(vfile == null) None else Some(implicitly[QueryStringBindable[String]].unbind("vfile", vfile)), if(dataset == null) None else Some(implicitly[QueryStringBindable[String]].unbind("dataset", dataset)))))
                                                         
-// @LINE:24
+// @LINE:7
+case (email, vfile, dataset) if true => Call("GET", _prefix + queryString(List(if(email == null) None else Some(implicitly[QueryStringBindable[String]].unbind("email", email)), if(vfile == null) None else Some(implicitly[QueryStringBindable[String]].unbind("vfile", vfile)), if(dataset == null) None else Some(implicitly[QueryStringBindable[String]].unbind("dataset", dataset)))))
+                                                        
+// @LINE:30
 case (email, vfile, dataset) if true => Call("GET", _prefix + { _defaultPrefix } + "climate" + queryString(List(if(email == null) None else Some(implicitly[QueryStringBindable[String]].unbind("email", email)), if(vfile == null) None else Some(implicitly[QueryStringBindable[String]].unbind("vfile", vfile)), if(dataset == null) None else Some(implicitly[QueryStringBindable[String]].unbind("dataset", dataset)))))
                                                         
    }
 }
                                                 
 
-// @LINE:33
+// @LINE:37
 def deleteClimateService(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "climate/delete/climateServices")
-}
-                                                
-
-// @LINE:6
-def login(): Call = {
-   Call("GET", _prefix)
 }
                                                 
     
@@ -267,28 +327,35 @@ def login(): Call = {
 
 
 // @LINE:48
+// @LINE:45
 // @LINE:44
 // @LINE:43
-// @LINE:42
+// @LINE:41
+// @LINE:40
 // @LINE:39
+// @LINE:38
 // @LINE:37
+// @LINE:36
 // @LINE:35
 // @LINE:34
 // @LINE:33
+// @LINE:32
 // @LINE:31
-// @LINE:29
-// @LINE:28
+// @LINE:30
 // @LINE:27
 // @LINE:26
-// @LINE:25
-// @LINE:24
+// @LINE:23
+// @LINE:22
 // @LINE:21
 // @LINE:20
-// @LINE:17
+// @LINE:19
 // @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
+// @LINE:12
+// @LINE:11
+// @LINE:10
 // @LINE:9
 // @LINE:8
 // @LINE:7
@@ -313,12 +380,12 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:21
-// @LINE:20
+// @LINE:27
+// @LINE:26
 class ReverseAboutusController {
     
 
-// @LINE:21
+// @LINE:27
 def aboutProject : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.AboutusController.aboutProject",
    """
@@ -329,7 +396,7 @@ def aboutProject : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:20
+// @LINE:26
 def aboutUs : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.AboutusController.aboutUs",
    """
@@ -343,15 +410,15 @@ def aboutUs : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:17
-// @LINE:16
-// @LINE:15
-// @LINE:14
-// @LINE:13
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
 class ReverseBugReportController {
     
 
-// @LINE:13
+// @LINE:19
 def reports : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.BugReportController.reports",
    """
@@ -362,7 +429,7 @@ def reports : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:17
+// @LINE:23
 def solveReport : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.BugReportController.solveReport",
    """
@@ -373,7 +440,7 @@ def solveReport : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:16
+// @LINE:22
 def deleteReport : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.BugReportController.deleteReport",
    """
@@ -384,7 +451,7 @@ def deleteReport : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:15
+// @LINE:21
 def list : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.BugReportController.list",
    """
@@ -395,7 +462,7 @@ def list : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:14
+// @LINE:20
 def newReport : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.BugReportController.newReport",
    """
@@ -409,13 +476,127 @@ def newReport : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
+// @LINE:12
+// @LINE:11
+// @LINE:10
+// @LINE:9
+// @LINE:8
+class ReverseApplication {
+    
+
+// @LINE:16
+def createNewComment : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.createNewComment",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "createNewComment"})
+      }
+   """
+)
+                        
+
+// @LINE:12
+def createNewUser : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.createNewUser",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "createNewUser"})
+      }
+   """
+)
+                        
+
+// @LINE:13
+def createSuccess : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.createSuccess",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "createSuccess"})
+      }
+   """
+)
+                        
+
+// @LINE:14
+def isEmailExisted : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.isEmailExisted",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "isEmailExisted"})
+      }
+   """
+)
+                        
+
+// @LINE:11
+def signup : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.signup",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "signup"})
+      }
+   """
+)
+                        
+
+// @LINE:9
+def logout : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.logout",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
+      }
+   """
+)
+                        
+
+// @LINE:15
+def comment : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.comment",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "comment"})
+      }
+   """
+)
+                        
+
+// @LINE:10
+def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.authenticate",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "authenticate"})
+      }
+   """
+)
+                        
+
+// @LINE:8
+def login : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.login",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+      }
+   """
+)
+                        
+    
+}
+              
+
+// @LINE:45
 // @LINE:44
 // @LINE:43
-// @LINE:42
 class ReverseDatasetController {
     
 
-// @LINE:44
+// @LINE:45
 def getSearchResult : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.getSearchResult",
    """
@@ -426,7 +607,7 @@ def getSearchResult : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:43
+// @LINE:44
 def searchDataset : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.searchDataset",
    """
@@ -437,7 +618,7 @@ def searchDataset : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:42
+// @LINE:43
 def datasetList : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.datasetList",
    """
@@ -451,26 +632,24 @@ def datasetList : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:41
+// @LINE:40
 // @LINE:39
+// @LINE:38
 // @LINE:37
+// @LINE:36
 // @LINE:35
 // @LINE:34
 // @LINE:33
+// @LINE:32
 // @LINE:31
-// @LINE:29
-// @LINE:28
-// @LINE:27
-// @LINE:26
-// @LINE:25
-// @LINE:24
-// @LINE:9
-// @LINE:8
+// @LINE:30
 // @LINE:7
 // @LINE:6
 class ReverseClimateServiceController {
     
 
-// @LINE:37
+// @LINE:40
 def addClimateServices : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.addClimateServices",
    """
@@ -481,7 +660,7 @@ def addClimateServices : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:27
+// @LINE:33
 def mostRecentlyAddedClimateServices : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.mostRecentlyAddedClimateServices",
    """
@@ -492,7 +671,7 @@ def mostRecentlyAddedClimateServices : JavascriptReverseRoute = JavascriptRevers
 )
                         
 
-// @LINE:35
+// @LINE:39
 def editClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.editClimateService",
    """
@@ -503,7 +682,7 @@ def editClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:29
+// @LINE:35
 def mostPopularClimateServices : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.mostPopularClimateServices",
    """
@@ -514,7 +693,7 @@ def mostPopularClimateServices : JavascriptReverseRoute = JavascriptReverseRoute
 )
                         
 
-// @LINE:25
+// @LINE:31
 def tutorial : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.tutorial",
    """
@@ -525,18 +704,7 @@ def tutorial : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:9
-def userRegister : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.ClimateServiceController.userRegister",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "register"})
-      }
-   """
-)
-                        
-
-// @LINE:39
+// @LINE:41
 def oneService : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.oneService",
    """
@@ -547,7 +715,7 @@ def oneService : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:34
+// @LINE:38
 def downloadClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.downloadClimateService",
    """
@@ -558,18 +726,7 @@ def downloadClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:8
-def register : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.ClimateServiceController.register",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "register"})
-      }
-   """
-)
-                        
-
-// @LINE:28
+// @LINE:34
 def mostRecentlyUsedClimateServices : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.mostRecentlyUsedClimateServices",
    """
@@ -580,7 +737,7 @@ def mostRecentlyUsedClimateServices : JavascriptReverseRoute = JavascriptReverse
 )
                         
 
-// @LINE:26
+// @LINE:32
 def climateServices : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.climateServices",
    """
@@ -591,7 +748,7 @@ def climateServices : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:31
+// @LINE:36
 def newClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.newClimateService",
    """
@@ -602,14 +759,18 @@ def newClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:24
+// @LINE:30
 // @LINE:7
+// @LINE:6
 def home : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.home",
    """
       function(email, vfile, dataset) {
       if (true) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "home" + _qS([(email == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("email", email)), (vfile == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("vfile", vfile)), (dataset == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("dataset", dataset))])})
+      }
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + """" + _qS([(email == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("email", email)), (vfile == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("vfile", vfile)), (dataset == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("dataset", dataset))])})
       }
       if (true) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "climate" + _qS([(email == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("email", email)), (vfile == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("vfile", vfile)), (dataset == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("dataset", dataset))])})
@@ -619,23 +780,12 @@ def home : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:33
+// @LINE:37
 def deleteClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.deleteClimateService",
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "climate/delete/climateServices"})
-      }
-   """
-)
-                        
-
-// @LINE:6
-def login : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.ClimateServiceController.login",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + """"})
       }
    """
 )
@@ -648,28 +798,35 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 
 
 // @LINE:48
+// @LINE:45
 // @LINE:44
 // @LINE:43
-// @LINE:42
+// @LINE:41
+// @LINE:40
 // @LINE:39
+// @LINE:38
 // @LINE:37
+// @LINE:36
 // @LINE:35
 // @LINE:34
 // @LINE:33
+// @LINE:32
 // @LINE:31
-// @LINE:29
-// @LINE:28
+// @LINE:30
 // @LINE:27
 // @LINE:26
-// @LINE:25
-// @LINE:24
+// @LINE:23
+// @LINE:22
 // @LINE:21
 // @LINE:20
-// @LINE:17
+// @LINE:19
 // @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
+// @LINE:12
+// @LINE:11
+// @LINE:10
 // @LINE:9
 // @LINE:8
 // @LINE:7
@@ -690,18 +847,18 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:21
-// @LINE:20
+// @LINE:27
+// @LINE:26
 class ReverseAboutusController {
     
 
-// @LINE:21
+// @LINE:27
 def aboutProject(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.AboutusController.aboutProject(), HandlerDef(this, "controllers.AboutusController", "aboutProject", Seq(), "GET", """""", _prefix + """aboutProject""")
 )
                       
 
-// @LINE:20
+// @LINE:26
 def aboutUs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.AboutusController.aboutUs(), HandlerDef(this, "controllers.AboutusController", "aboutUs", Seq(), "GET", """ About Us""", _prefix + """aboutus""")
 )
@@ -710,39 +867,39 @@ def aboutUs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:17
-// @LINE:16
-// @LINE:15
-// @LINE:14
-// @LINE:13
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
 class ReverseBugReportController {
     
 
-// @LINE:13
+// @LINE:19
 def reports(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.BugReportController.reports(), HandlerDef(this, "controllers.BugReportController", "reports", Seq(), "GET", """ BugReporting""", _prefix + """bugs""")
 )
                       
 
-// @LINE:17
+// @LINE:23
 def solveReport(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.BugReportController.solveReport(), HandlerDef(this, "controllers.BugReportController", "solveReport", Seq(), "POST", """""", _prefix + """solve/report""")
 )
                       
 
-// @LINE:16
+// @LINE:22
 def deleteReport(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.BugReportController.deleteReport(), HandlerDef(this, "controllers.BugReportController", "deleteReport", Seq(), "POST", """""", _prefix + """delete/report""")
 )
                       
 
-// @LINE:15
+// @LINE:21
 def list(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.BugReportController.list(), HandlerDef(this, "controllers.BugReportController", "list", Seq(), "GET", """""", _prefix + """bug/list""")
 )
                       
 
-// @LINE:14
+// @LINE:20
 def newReport(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.BugReportController.newReport(), HandlerDef(this, "controllers.BugReportController", "newReport", Seq(), "GET", """""", _prefix + """newReport""")
 )
@@ -751,25 +908,94 @@ def newReport(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
+// @LINE:12
+// @LINE:11
+// @LINE:10
+// @LINE:9
+// @LINE:8
+class ReverseApplication {
+    
+
+// @LINE:16
+def createNewComment(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.createNewComment(), HandlerDef(this, "controllers.Application", "createNewComment", Seq(), "GET", """""", _prefix + """createNewComment""")
+)
+                      
+
+// @LINE:12
+def createNewUser(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.createNewUser(), HandlerDef(this, "controllers.Application", "createNewUser", Seq(), "GET", """""", _prefix + """createNewUser""")
+)
+                      
+
+// @LINE:13
+def createSuccess(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.createSuccess(), HandlerDef(this, "controllers.Application", "createSuccess", Seq(), "GET", """""", _prefix + """createSuccess""")
+)
+                      
+
+// @LINE:14
+def isEmailExisted(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.isEmailExisted(), HandlerDef(this, "controllers.Application", "isEmailExisted", Seq(), "POST", """""", _prefix + """isEmailExisted""")
+)
+                      
+
+// @LINE:11
+def signup(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.signup(), HandlerDef(this, "controllers.Application", "signup", Seq(), "GET", """""", _prefix + """signup""")
+)
+                      
+
+// @LINE:9
+def logout(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.logout(), HandlerDef(this, "controllers.Application", "logout", Seq(), "GET", """""", _prefix + """logout""")
+)
+                      
+
+// @LINE:15
+def comment(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.comment(), HandlerDef(this, "controllers.Application", "comment", Seq(), "GET", """""", _prefix + """comment""")
+)
+                      
+
+// @LINE:10
+def authenticate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.authenticate(), HandlerDef(this, "controllers.Application", "authenticate", Seq(), "GET", """""", _prefix + """authenticate""")
+)
+                      
+
+// @LINE:8
+def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.login(), HandlerDef(this, "controllers.Application", "login", Seq(), "GET", """""", _prefix + """login""")
+)
+                      
+    
+}
+                          
+
+// @LINE:45
 // @LINE:44
 // @LINE:43
-// @LINE:42
 class ReverseDatasetController {
     
 
-// @LINE:44
+// @LINE:45
 def getSearchResult(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.DatasetController.getSearchResult(), HandlerDef(this, "controllers.DatasetController", "getSearchResult", Seq(), "GET", """""", _prefix + """climate/getSearchResult""")
 )
                       
 
-// @LINE:43
+// @LINE:44
 def searchDataset(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.DatasetController.searchDataset(), HandlerDef(this, "controllers.DatasetController", "searchDataset", Seq(), "GET", """""", _prefix + """climate/searchDataSet""")
 )
                       
 
-// @LINE:42
+// @LINE:43
 def datasetList(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.DatasetController.datasetList(), HandlerDef(this, "controllers.DatasetController", "datasetList", Seq(), "GET", """Keyword search""", _prefix + """climate/datasets""")
 )
@@ -778,112 +1004,92 @@ def datasetList(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:41
+// @LINE:40
 // @LINE:39
+// @LINE:38
 // @LINE:37
+// @LINE:36
 // @LINE:35
 // @LINE:34
 // @LINE:33
+// @LINE:32
 // @LINE:31
-// @LINE:29
-// @LINE:28
-// @LINE:27
-// @LINE:26
-// @LINE:25
-// @LINE:24
-// @LINE:9
-// @LINE:8
+// @LINE:30
 // @LINE:7
 // @LINE:6
 class ReverseClimateServiceController {
     
 
-// @LINE:37
+// @LINE:40
 def addClimateServices(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.addClimateServices(), HandlerDef(this, "controllers.ClimateServiceController", "addClimateServices", Seq(), "GET", """""", _prefix + """climate/new/climateServices""")
 )
                       
 
-// @LINE:27
+// @LINE:33
 def mostRecentlyAddedClimateServices(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.mostRecentlyAddedClimateServices(), HandlerDef(this, "controllers.ClimateServiceController", "mostRecentlyAddedClimateServices", Seq(), "GET", """""", _prefix + """climate/mostRecentlyAddedClimateServices""")
 )
                       
 
-// @LINE:35
+// @LINE:39
 def editClimateService(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.editClimateService(), HandlerDef(this, "controllers.ClimateServiceController", "editClimateService", Seq(), "POST", """""", _prefix + """climate/edit/climateServices""")
 )
                       
 
-// @LINE:29
+// @LINE:35
 def mostPopularClimateServices(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.mostPopularClimateServices(), HandlerDef(this, "controllers.ClimateServiceController", "mostPopularClimateServices", Seq(), "GET", """""", _prefix + """climate/mostPopularClimateServices""")
 )
                       
 
-// @LINE:25
+// @LINE:31
 def tutorial(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.tutorial(), HandlerDef(this, "controllers.ClimateServiceController", "tutorial", Seq(), "GET", """""", _prefix + """climate/tutorial""")
 )
                       
 
-// @LINE:9
-def userRegister(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.ClimateServiceController.userRegister(), HandlerDef(this, "controllers.ClimateServiceController", "userRegister", Seq(), "POST", """""", _prefix + """register""")
-)
-                      
-
-// @LINE:39
+// @LINE:41
 def oneService(url:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.oneService(url), HandlerDef(this, "controllers.ClimateServiceController", "oneService", Seq(classOf[String]), "GET", """""", _prefix + """climate/oneService""")
 )
                       
 
-// @LINE:34
+// @LINE:38
 def downloadClimateService(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.downloadClimateService(), HandlerDef(this, "controllers.ClimateServiceController", "downloadClimateService", Seq(), "POST", """""", _prefix + """climate/download/climateServices""")
 )
                       
 
-// @LINE:8
-def register(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.ClimateServiceController.register(), HandlerDef(this, "controllers.ClimateServiceController", "register", Seq(), "GET", """""", _prefix + """register""")
-)
-                      
-
-// @LINE:28
+// @LINE:34
 def mostRecentlyUsedClimateServices(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.mostRecentlyUsedClimateServices(), HandlerDef(this, "controllers.ClimateServiceController", "mostRecentlyUsedClimateServices", Seq(), "GET", """""", _prefix + """climate/mostRecentlyUsedClimateServices""")
 )
                       
 
-// @LINE:26
+// @LINE:32
 def climateServices(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.climateServices(), HandlerDef(this, "controllers.ClimateServiceController", "climateServices", Seq(), "GET", """""", _prefix + """climate/climateServices""")
 )
                       
 
-// @LINE:31
+// @LINE:36
 def newClimateService(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.newClimateService(), HandlerDef(this, "controllers.ClimateServiceController", "newClimateService", Seq(), "POST", """""", _prefix + """climate/new/climateServices""")
 )
                       
 
-// @LINE:7
+// @LINE:6
 def home(email:String, vfile:String, dataset:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.ClimateServiceController.home(email, vfile, dataset), HandlerDef(this, "controllers.ClimateServiceController", "home", Seq(classOf[String], classOf[String], classOf[String]), "GET", """""", _prefix + """home""")
+   controllers.ClimateServiceController.home(email, vfile, dataset), HandlerDef(this, "controllers.ClimateServiceController", "home", Seq(classOf[String], classOf[String], classOf[String]), "GET", """ Home page""", _prefix + """home""")
 )
                       
 
-// @LINE:33
+// @LINE:37
 def deleteClimateService(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.deleteClimateService(), HandlerDef(this, "controllers.ClimateServiceController", "deleteClimateService", Seq(), "POST", """""", _prefix + """climate/delete/climateServices""")
-)
-                      
-
-// @LINE:6
-def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.ClimateServiceController.login(), HandlerDef(this, "controllers.ClimateServiceController", "login", Seq(), "GET", """ Home page""", _prefix + """""")
 )
                       
     

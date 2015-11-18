@@ -44,6 +44,7 @@ public class ClimateService {
 	private String scenario;
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createTime;
+	private String rate;
 
 	private String versionNo;
 
@@ -66,6 +67,14 @@ public class ClimateService {
 		this.createTime = createTime;
 		this.versionNo = versionNo;
 	}
+
+	public void setRate(String rate){
+		this.rate = rate;
+	}
+
+    public String getRate(){
+    	return this.rate;
+    }
 
 	public long getId() {
 		return id;

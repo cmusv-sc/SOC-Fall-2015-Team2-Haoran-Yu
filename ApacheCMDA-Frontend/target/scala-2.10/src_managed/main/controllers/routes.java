@@ -1,6 +1,6 @@
-// @SOURCE:/Users/Tongyun/Documents/SOC-Fall-2015-Team2-Haoran-Yu-60e5416fb2ffd2de3b1989acc6e8036026d5680d/ApacheCMDA-Frontend/conf/routes
-// @HASH:f29d163d719cba268231c9c55b338c4ff64cfea0
-// @DATE:Fri Nov 06 23:51:45 EST 2015
+// @SOURCE:/Users/Tongyun/Desktop/SOC-Fall-2015-master/ApacheCMDA-Frontend/conf/routes
+// @HASH:b02d5b7b482a6d3f2f4280e97df1c7300a4831f9
+// @DATE:Wed Nov 18 02:07:59 EST 2015
 
 package controllers;
 
@@ -8,12 +8,14 @@ public class routes {
 public static final controllers.ReverseAssets Assets = new controllers.ReverseAssets();
 public static final controllers.ReverseAboutusController AboutusController = new controllers.ReverseAboutusController();
 public static final controllers.ReverseBugReportController BugReportController = new controllers.ReverseBugReportController();
+public static final controllers.ReverseApplication Application = new controllers.ReverseApplication();
 public static final controllers.ReverseDatasetController DatasetController = new controllers.ReverseDatasetController();
 public static final controllers.ReverseClimateServiceController ClimateServiceController = new controllers.ReverseClimateServiceController();
 public static class javascript {
 public static final controllers.javascript.ReverseAssets Assets = new controllers.javascript.ReverseAssets();
 public static final controllers.javascript.ReverseAboutusController AboutusController = new controllers.javascript.ReverseAboutusController();
 public static final controllers.javascript.ReverseBugReportController BugReportController = new controllers.javascript.ReverseBugReportController();
+public static final controllers.javascript.ReverseApplication Application = new controllers.javascript.ReverseApplication();
 public static final controllers.javascript.ReverseDatasetController DatasetController = new controllers.javascript.ReverseDatasetController();
 public static final controllers.javascript.ReverseClimateServiceController ClimateServiceController = new controllers.javascript.ReverseClimateServiceController();
 }
@@ -21,6 +23,7 @@ public static class ref {
 public static final controllers.ref.ReverseAssets Assets = new controllers.ref.ReverseAssets();
 public static final controllers.ref.ReverseAboutusController AboutusController = new controllers.ref.ReverseAboutusController();
 public static final controllers.ref.ReverseBugReportController BugReportController = new controllers.ref.ReverseBugReportController();
+public static final controllers.ref.ReverseApplication Application = new controllers.ref.ReverseApplication();
 public static final controllers.ref.ReverseDatasetController DatasetController = new controllers.ref.ReverseDatasetController();
 public static final controllers.ref.ReverseClimateServiceController ClimateServiceController = new controllers.ref.ReverseClimateServiceController();
 }

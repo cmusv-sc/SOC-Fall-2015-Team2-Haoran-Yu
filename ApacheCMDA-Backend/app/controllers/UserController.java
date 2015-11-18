@@ -30,9 +30,6 @@ import javax.persistence.PersistenceException;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.Gson;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 
 /**
  * The main set of web services.
@@ -51,52 +48,41 @@ public class UserController extends Controller {
 	}
 
 	public Result addUser() {
+		JsonNode json = request().body().asJson();
+		if (json == null) {
+			System.out.println("User not created, expecting Json data");
+			return badRequest("User not created, expecting Json data");
+		}
 
-        	
-		System.out.println("start !!! add user");
-			// System.out.println("backend!!");
-			JsonNode json = request().body().asJson();
-			if (json == null) {
-				System.out.println("json is null");
-				return badRequest("User not created, expecting Json data");
-			}
-			System.out.println("not return");
-			// Parse JSON file
-			String userName = json.path("userName").asText();
-			if(userName.length() == 0) System.out.println("length is 0");
-			System.out.println("username: " + userName);
-			String password = json.path("password").asText();
-			String firstName = json.path("firstName").asText();
-			String lastName = json.path("lastName").asText();
-			String middleInitial = json.path("middleInitial").asText();
-		    String affiliation = json.path("affiliation").asText();
-		    String title = json.path("title").asText();
-		    String email = json.path("email").asText();
-		    String mailingAddress = json.path("mailingAddress").asText();
-		    String phoneNumber = json.path("phoneNumber").asText();
-		    String faxNumber = json.path("faxNumber").asText();
-		    String researchFields = json.path("researchFields").asText();
-		    String highestDegree = json.path("highestDegree").asText();
+		// Parse JSON file
+		String userName = json.path("userName").asText();
+		String password = json.path("password").asText();
+		String firstName = json.path("firstName").asText();
+		String lastName = json.path("lastName").asText();
+		String middleInitial = json.path("middleInitial").asText();
+	    String affiliation = json.path("affiliation").asText();
+	    String title = json.path("title").asText();
+	    String email = json.path("email").asText();
+	    String mailingAddress = json.path("mailingAddress").asText();
+	    String phoneNumber = json.path("phoneNumber").asText();
+	    String faxNumber = json.path("faxNumber").asText();
+	    String researchFields = json.path("researchFields").asText();
+	    String highestDegree = json.path("highestDegree").asText();
 
-			try {
-				if (userRepository.findByUserName(userName).size()>0) {
-			
-					System.out.println("UserName has been used: " + userName);
-					return badRequest("UserName has been used");
-				}
-				User user = new User(userName, password, firstName, lastName, middleInitial, affiliation, title, email, mailingAddress, phoneNumber, faxNumber, researchFields, highestDegree);	
-				userRepository.save(user);
-				
-				
-				System.out.println("User saved: " + user.getId());
-				return created(new Gson().toJson(user.getId()));
-			} catch (PersistenceException pe) {
-				pe.printStackTrace();
-				
-				System.out.println("User not saved: " + firstName + " " + lastName);
-				return badRequest("User not saved: " + firstName + " " + lastName);
+		try {
+			if (userRepository.findByUserName(userName).size()>0) {
+				System.out.println("UserName has been used: " + userName);
+				return badRequest("UserName has been used");
 			}
-		
+			User user = new User(userName, password, firstName, lastName, middleInitial, affiliation, title, email, mailingAddress, phoneNumber, faxNumber, researchFields, highestDegree);	
+			userRepository.save(user);
+			System.out.println("User saved: " + user.getId());
+			return created(new Gson().toJson(user.getId()));
+		} catch (PersistenceException pe) {
+			pe.printStackTrace();
+			System.out.println("User not saved: " + firstName + " " + lastName);
+			return badRequest("User not saved: " + firstName + " " + lastName);
+		}
 	}
 
 	public Result deleteUser(Long id) {
@@ -199,6 +185,9 @@ public class UserController extends Controller {
 		}
 		String email = json.path("email").asText();
 		String password = json.path("password").asText();
+		
+		System.out.println("**************" + email + "************" + password);
+		
 		User user = userRepository.findByEmail(email);
 		if (user.getPassword().equals(password)) {
 			System.out.println("User is valid");
@@ -233,6 +222,21 @@ public class UserController extends Controller {
 			return badRequest("User is not deleted");
 		}
 		
+	}
+	
+	public Result isEmailExisted(){
+		JsonNode json = request().body().asJson();
+		if (json == null) {
+			System.out.println("Cannot check email, expecting Json data");
+			return badRequest("Cannot check email, expecting Json data");
+		}
+		String email = json.path("email").asText();
+		System.out.println("backend email: " + email);
+		if (userRepository.findByEmail(email) != null) {
+			System.out.println(userRepository.findByEmail(email).getEmail());
+			return badRequest("Email already existed");
+		}
+		return ok("Email is valid");
 	}
 
 }

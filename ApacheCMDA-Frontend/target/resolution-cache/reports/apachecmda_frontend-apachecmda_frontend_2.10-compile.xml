@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, echo-trace-compile, echo-trace-test, echo-weave, echo-sigar"
-		date="20151106235141"/>
+		date="20151117215650"/>
 	<dependencies>
 		<module organisation="com.amazonaws" name="aws-java-sdk">
 			<revision name="1.7.6" status="release" pubdate="20140416204404" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://aws.amazon.com/sdkforjava" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="67">
@@ -22,22 +22,22 @@
 			</revision>
 		</module>
 		<module organisation="joda-time" name="joda-time">
-			<revision name="2.9" status="release" pubdate="20151024054829" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-time/" downloaded="false" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="71">
+			<revision name="2.9.1" status="release" pubdate="20151112070326" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-time/" downloaded="false" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="71">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="6455" time="0" location="/Users/Tongyun/.ivy2/cache/joda-time/joda-time/ivy-2.9.xml" searched="true" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/joda-time/joda-time/2.9/joda-time-2.9.pom"/>
+				<metadata-artifact status="no" details="" size="6457" time="0" location="/Users/Tongyun/.ivy2/cache/joda-time/joda-time/ivy-2.9.1.xml" searched="true" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/joda-time/joda-time/2.9.1/joda-time-2.9.1.pom"/>
 				<caller organisation="com.amazonaws" name="aws-java-sdk" conf="default, compile, runtime, master" rev="[2.2,)" rev-constraint-default="[2.2,)" rev-constraint-dynamic="[2.2,)" callerrev="1.7.6"/>
 				<caller organisation="com.typesafe.play" name="play_2.10" conf="default, compile, runtime, master" rev="2.2" rev-constraint-default="2.2" rev-constraint-dynamic="2.2" callerrev="2.2.3"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.10" conf="compile, runtime" rev="2.2" rev-constraint-default="2.2" rev-constraint-dynamic="2.2" callerrev="2.2.3"/>
 				<artifacts>
-					<artifact name="joda-time" type="jar" ext="jar" status="no" details="" size="625993" time="0" location="/Users/Tongyun/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/joda-time/joda-time/2.9/joda-time-2.9.jar"/>
+					<artifact name="joda-time" type="jar" ext="jar" status="no" details="" size="625986" time="0" location="/Users/Tongyun/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/joda-time/joda-time/2.9.1/joda-time-2.9.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 			<revision name="2.2" status="release" pubdate="20130308092346" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://joda-time.sourceforge.net" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="-1">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3409" time="0" location="/Users/Tongyun/.ivy2/cache/joda-time/joda-time/ivy-2.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.pom"/>
-				<evicted-by rev="2.9"/>
+				<evicted-by rev="2.9.1"/>
 				<caller organisation="com.typesafe.play" name="play_2.10" conf="default, compile, runtime, master" rev="2.2" rev-constraint-default="2.2" rev-constraint-dynamic="2.2" callerrev="2.2.3"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.10" conf="compile, runtime" rev="2.2" rev-constraint-default="2.2" rev-constraint-dynamic="2.2" callerrev="2.2.3"/>
 				<artifacts>
