@@ -1,6 +1,6 @@
 // @SOURCE:/Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Frontend/conf/routes
-// @HASH:5a3a4729904cc9b40b47346fb6b211abf0d3ed8f
-// @DATE:Wed Nov 18 19:23:48 EST 2015
+// @HASH:a49a7d44d8993c8866b95287e625373af367bd1e
+// @DATE:Wed Nov 18 20:44:02 EST 2015
 
 package controllers;
 

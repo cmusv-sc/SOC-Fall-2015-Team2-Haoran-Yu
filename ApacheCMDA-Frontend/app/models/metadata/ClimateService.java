@@ -38,7 +38,6 @@ public class ClimateService {
 	private String rate;
 
 	public ClimateService(){
-		this.rate = "0";
 	}
 
 	public String getRate(){
@@ -144,7 +143,10 @@ public class ClimateService {
 		return null;
 	}
 
-    // get rates for a service
+    /**
+     * Get the rates by service name
+     * @return rate
+     */
 	public String getAllRates(){
 		List<Comment> comments = allRates();
 		int rates = 0;
@@ -158,10 +160,14 @@ public class ClimateService {
 			}
 		}
 		double result = (double)rates / (double)count;
-		setRate(String.valueOf(result));
-		return getRate();
+		setRate(String.format("%.3f", result));
+		return count == 0 ? "0.0": getRate();
 	}
 
+    /**
+     * Get all rates for all services.
+     * @return comment list
+     */
 	public static List<Comment> allRates(){
 		List<Comment> comments = new ArrayList<Comment>();
 
