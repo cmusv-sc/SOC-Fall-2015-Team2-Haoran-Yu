@@ -53,16 +53,18 @@ public class ClimateServiceController extends Controller {
 	private final ClimateServiceRepository climateServiceRepository;
 	private final UserRepository userRepository;
     private final ServiceEntryRepository serviceEntryRepository;
+    private final CommentRepository commentRepository;
 
 	// We are using constructor injection to receive a repository to support our
 	// desire for immutability.
 	@Inject
 	public ClimateServiceController(
 			final ClimateServiceRepository climateServiceRepository,
-			UserRepository userRepository,ServiceEntryRepository serviceEntryRepository) {
+			UserRepository userRepository,ServiceEntryRepository serviceEntryRepository, CommentRepository commentRepository) {
 		this.climateServiceRepository = climateServiceRepository;
 		this.userRepository = userRepository;
         this.serviceEntryRepository = serviceEntryRepository;
+        this.commentRepository = commentRepository;
 	}
 
 	public Result addClimateService() {
@@ -400,22 +402,22 @@ public class ClimateServiceController extends Controller {
 
     // get rates   (need implement link to database)
     public Result getAllClimateServicesRate(String format){
-    	List<ClimateService> climateServices = new ArrayList<ClimateService>();
-    	for(int i = 0; i < 5; i++){
-    		ClimateService c = new ClimateService();
-    		Random r = new Random();
-    		c.setRate(String.valueOf(r.nextInt(6)));
-    		climateServices.add(c);
-    	}
-    	// // Iterable<ClimateService> climateServices = climateServiceRepository.getClimateServiceRate();
-     //    Iterable<ClimateService> climateServices = list;
-     //    if (climateServices == null) {
-     //        System.out.println("No climate service found");
-     //    }
+    	// List<ClimateService> climateServices = new ArrayList<ClimateService>();
+    	// for(int i = 0; i < 5; i++){
+    	// 	ClimateService c = new ClimateService();
+    	// 	Random r = new Random();
+    	// 	c.setRate(String.valueOf(r.nextInt(6)));
+    	// 	climateServices.add(c);
+    	// }
+    	Iterable<Comment> comments = commentRepository.findAll();
+        // Iterable<ClimateService> climateServices = list;
+        if (comments == null) {
+            System.out.println("No climate service found");
+        }
 
         String result = new String();
         if (format.equals("json")) {
-            result = new Gson().toJson(climateServices);
+            result = new Gson().toJson(comments);
         }
         return ok(result);
     }

@@ -23,6 +23,7 @@ import java.util.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import util.APICall;
 import util.Constants;
+import models.*;
 
 public class ClimateService {
 
@@ -36,11 +37,11 @@ public class ClimateService {
 	private String photo;
 	private String rate;
 
+	public ClimateService(){
+		this.rate = "0";
+	}
+
 	public String getRate(){
-		// Random r = new Random();
-		// return String.valueOf(r.nextInt(101));
-		double rate = getAllRates();
-		setRate(String.valueOf(rate));
 		return this.rate;
 	}
 
@@ -87,10 +88,6 @@ public class ClimateService {
 	private static final String DELETE_CLIMATE_SERVICE_CALL = Constants.NEW_BACKEND + util.Constants.NEW_DELETE_CLIMATE_SERVICE;
 	private static final String EDIT_CLIMATE_SERVICE_CALL = Constants.NEW_BACKEND+ "climateService/"
 			+ util.Constants.NEW_EDIT_CLIMATE_SERVICE + "/name/";
-
-	public ClimateService() {
-		// TODO Auto-generated constructor stub
-	}
 
 	public String getId() {
 		return id;
@@ -148,29 +145,46 @@ public class ClimateService {
 	}
 
     // get rates for a service
-	public static double getAllRates(){
-		System.out.println("in get all rates");
-		List<ClimateService> climateServices = new ArrayList<ClimateService>();
-
-		JsonNode climateServicesNode = APICall
-				.callAPI(GET_CLIMATE_RATE_CALL);
-         
-        System.out.println("return from backend"); 
-	    if (climateServicesNode == null || climateServicesNode.has("error")
-				|| !climateServicesNode.isArray()) {
-	    	System.out.println("error!"); 
-			return 0.0;
-		}
-
-        System.out.println("no error"); 
-		int size = climateServicesNode.size();
+	public String getAllRates(){
+		List<Comment> comments = allRates();
 		int rates = 0;
-		for (int i = 0; i < size; i++) {
-			JsonNode json = climateServicesNode.path(i);
-			int rate = Integer.parseInt(json.path("rate").asText());
-			rates += rate; 
+		int count = 0;
+		String serviceName = getClimateServiceName();
+		for (Comment comment : comments) {
+			String name = comment.getServiceName();
+			if(name.equals(serviceName)){
+				rates += Integer.parseInt(comment.getRate());
+				count++;
+			}
 		}
-		return (double)rates / (double)size;
+		double result = (double)rates / (double)count;
+		setRate(String.valueOf(result));
+		return getRate();
+	}
+
+	public static List<Comment> allRates(){
+		List<Comment> comments = new ArrayList<Comment>();
+
+		JsonNode climateServicesRateNode = APICall
+				.callAPI(GET_CLIMATE_RATE_CALL);
+
+		if (climateServicesRateNode == null || climateServicesRateNode.has("error")
+				|| !climateServicesRateNode.isArray()) {
+	    	System.out.println("error!"); 
+			return comments;
+		}
+
+		for (int i = 0; i < climateServicesRateNode.size(); i++) {
+			JsonNode json = climateServicesRateNode.path(i);
+			Comment newComment = new Comment();
+			newComment.setId(Long.parseLong(json.path("id").asText()));
+			newComment.setServiceName(json.get(
+					"serviceName").asText());
+			newComment.setRate(json.path("rate").asText());
+			newComment.setComment(json.path("comment").asText());
+			comments.add(newComment);
+		}
+		return comments;
 	}
 
 	/**

@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/}root...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/}root...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, echo-trace-compile, echo-trace-test, echo-weave, echo-sigar, jacoco][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3e0ed95c[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@783fe4ac[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.4[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.11.4[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.4 in sbt-chain[0m
@@ -543,7 +543,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play_2.11;2.3.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.3.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#play-java_2.11;2.3.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@12807827[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@acf1505[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#play-java_2.11;2.3.7[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: com.typesafe.play#play-java_2.11;2.3.7[0m
 [0m[[0mdebug[0m] [0m	found com.typesafe.play#play-java_2.11;2.3.7 in sbt-chain[0m
@@ -15036,24 +15036,24 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.aspectj#aspectjweaver;1.7.3!aspectjweaver.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.trace#trace-sigar-libs;0.1.7!trace-sigar-libs.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.jacoco#org.jacoco.agent;0.7.1.201405082137!org.jacoco.agent.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1465ms :: artifacts dl 36ms[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT compile produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT runtime produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT test produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT provided produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT optional produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT compile-internal produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT runtime-internal produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT test-internal produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT plugin produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT sources produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT docs produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT pom produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT scala-tool produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT echo-trace-compile produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-echo-trace-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT echo-trace-test produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-echo-trace-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT echo-weave produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-echo-weave.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT echo-sigar produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-echo-sigar.xml[0m
-[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT jacoco produced in /Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-jacoco.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1465ms resolve - 36ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1523ms :: artifacts dl 35ms[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT compile produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT runtime produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT test produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT provided produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT optional produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT compile-internal produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT runtime-internal produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT test-internal produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT plugin produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT sources produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT docs produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT pom produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT scala-tool produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT echo-trace-compile produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-echo-trace-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT echo-trace-test produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-echo-trace-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT echo-weave produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-echo-weave.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT echo-sigar produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-echo-sigar.xml[0m
+[0m[[0mdebug[0m] [0m	report for apachecmda_backend#apachecmda_backend_2.11;1.0-SNAPSHOT jacoco produced in /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/target/resolution-cache/reports/apachecmda_backend-apachecmda_backend_2.11-jacoco.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (1523ms resolve - 35ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
