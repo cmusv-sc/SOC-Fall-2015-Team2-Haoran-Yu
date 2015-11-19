@@ -27,6 +27,8 @@ GET         /aboutus                                             controllers.Abo
 GET         /aboutProject                                        controllers.AboutusController.aboutProject()
 
 # Climate Model
+GET 		/climate/getcssearchresult							controllers.ClimateServiceController.getSearchResult()
+GET			/climate/searchClimateServices						controllers.ClimateServiceController.searchClimateService()
 GET			/climate											controllers.ClimateServiceController.home(email ?= null, vfile ?= null, dataset ?= null)
 GET			/climate/tutorial									controllers.ClimateServiceController.tutorial()
 GET			/climate/climateServices							controllers.ClimateServiceController.climateServices()

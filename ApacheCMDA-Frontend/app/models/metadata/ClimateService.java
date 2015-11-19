@@ -24,6 +24,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import util.APICall;
 import util.Constants;
 import models.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 public class ClimateService {
 
@@ -88,6 +90,8 @@ public class ClimateService {
 	private static final String EDIT_CLIMATE_SERVICE_CALL = Constants.NEW_BACKEND+ "climateService/"
 			+ util.Constants.NEW_EDIT_CLIMATE_SERVICE + "/name/";
 
+	private static final String CLIMATESERVICE_QUERY = Constants.NEW_BACKEND + "climateService/queryClimateService";
+
 	public String getId() {
 		return id;
 	}
@@ -141,6 +145,39 @@ public class ClimateService {
 				return element;
 		}
 		return null;
+	}
+
+    //newly added
+	public static List<ClimateService> queryClimateService(String climateServiceName) {
+		
+		List<ClimateService> serviceset = new ArrayList<ClimateService>();
+		ObjectMapper mapper = new ObjectMapper();
+		ObjectNode queryJson = mapper.createObjectNode();
+		queryJson.put("name", climateServiceName);
+		
+		//Connecting backend
+		JsonNode climateServiceNode = APICall.postAPI(CLIMATESERVICE_QUERY, queryJson);
+		
+		if (climateServiceNode == null || climateServiceNode.has("error")
+				|| !climateServiceNode.isArray()) {
+			return serviceset;
+		}
+
+		for (int i = 0; i < climateServiceNode.size(); i++) {
+
+			JsonNode json = climateServiceNode.path(i);
+			ClimateService newService = new ClimateService();
+			newService.setId(json.get("id").asText());
+			newService.setClimateServiceName(json.get(
+					"name").asText());
+			newService.setPurpose(json.findPath("purpose").asText());
+			newService.setUrl(json.findPath("url").asText());
+			newService.setScenario(json.findPath("scenario").asText());
+			newService.setVersion(json.findPath("versionNo").asText());
+			newService.setRootservice(json.findPath("rootServiceId").asText());
+			serviceset.add(newService);
+		}
+		return serviceset;
 	}
 
     /**

@@ -1,6 +1,6 @@
 // @SOURCE:/Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Frontend/conf/routes
-// @HASH:a49a7d44d8993c8866b95287e625373af367bd1e
-// @DATE:Wed Nov 18 20:44:02 EST 2015
+// @HASH:655d902ffe4285e02e945a207dcdd45222dc8793
+// @DATE:Wed Nov 18 21:51:48 EST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,10 +13,12 @@ import play.libs.F
 import Router.queryString
 
 
-// @LINE:48
+// @LINE:50
+// @LINE:47
+// @LINE:46
 // @LINE:45
-// @LINE:44
 // @LINE:43
+// @LINE:42
 // @LINE:41
 // @LINE:40
 // @LINE:39
@@ -49,11 +51,11 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:48
+// @LINE:50
 class ReverseAssets {
     
 
-// @LINE:48
+// @LINE:50
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -192,25 +194,25 @@ def login(): Call = {
 }
                           
 
+// @LINE:47
+// @LINE:46
 // @LINE:45
-// @LINE:44
-// @LINE:43
 class ReverseDatasetController {
     
 
-// @LINE:45
+// @LINE:47
 def getSearchResult(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/getSearchResult")
 }
                                                 
 
-// @LINE:44
+// @LINE:46
 def searchDataset(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/searchDataSet")
 }
                                                 
 
-// @LINE:43
+// @LINE:45
 def datasetList(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/datasets")
 }
@@ -219,6 +221,8 @@ def datasetList(): Call = {
 }
                           
 
+// @LINE:43
+// @LINE:42
 // @LINE:41
 // @LINE:40
 // @LINE:39
@@ -236,67 +240,79 @@ def datasetList(): Call = {
 class ReverseClimateServiceController {
     
 
-// @LINE:40
+// @LINE:42
 def addClimateServices(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climateService/addClimateService")
 }
                                                 
 
-// @LINE:33
+// @LINE:35
 def mostRecentlyAddedClimateServices(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/mostRecentlyAddedClimateServices")
 }
                                                 
 
-// @LINE:39
+// @LINE:41
 def editClimateService(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "climate/edit/climateServices")
 }
                                                 
 
-// @LINE:35
+// @LINE:37
 def mostPopularClimateServices(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/mostPopularClimateServices")
 }
                                                 
 
-// @LINE:31
+// @LINE:33
 def tutorial(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/tutorial")
 }
                                                 
 
-// @LINE:41
+// @LINE:43
 def oneService(url:String = null): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/oneService" + queryString(List(if(url == null) None else Some(implicitly[QueryStringBindable[String]].unbind("url", url)))))
 }
                                                 
 
-// @LINE:38
+// @LINE:31
+def searchClimateService(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "climate/searchClimateServices")
+}
+                                                
+
+// @LINE:40
 def downloadClimateService(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "climate/download/climateServices")
 }
                                                 
 
-// @LINE:34
+// @LINE:36
 def mostRecentlyUsedClimateServices(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/mostRecentlyUsedClimateServices")
 }
                                                 
 
-// @LINE:32
+// @LINE:34
 def climateServices(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "climate/climateServices")
 }
                                                 
 
-// @LINE:36
+// @LINE:38
 def newClimateService(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "climate/new/climateServices")
 }
                                                 
 
 // @LINE:30
+def getSearchResult(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "climate/getcssearchresult")
+}
+                                                
+
+// @LINE:32
 // @LINE:7
 // @LINE:6
 def home(email:String = null, vfile:String = null, dataset:String = null): Call = {
@@ -307,14 +323,14 @@ case (email, vfile, dataset) if true => Call("GET", _prefix + { _defaultPrefix }
 // @LINE:7
 case (email, vfile, dataset) if true => Call("GET", _prefix + queryString(List(if(email == null) None else Some(implicitly[QueryStringBindable[String]].unbind("email", email)), if(vfile == null) None else Some(implicitly[QueryStringBindable[String]].unbind("vfile", vfile)), if(dataset == null) None else Some(implicitly[QueryStringBindable[String]].unbind("dataset", dataset)))))
                                                         
-// @LINE:30
+// @LINE:32
 case (email, vfile, dataset) if true => Call("GET", _prefix + { _defaultPrefix } + "climate" + queryString(List(if(email == null) None else Some(implicitly[QueryStringBindable[String]].unbind("email", email)), if(vfile == null) None else Some(implicitly[QueryStringBindable[String]].unbind("vfile", vfile)), if(dataset == null) None else Some(implicitly[QueryStringBindable[String]].unbind("dataset", dataset)))))
                                                         
    }
 }
                                                 
 
-// @LINE:37
+// @LINE:39
 def deleteClimateService(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "climate/delete/climateServices")
 }
@@ -326,10 +342,12 @@ def deleteClimateService(): Call = {
                   
 
 
-// @LINE:48
+// @LINE:50
+// @LINE:47
+// @LINE:46
 // @LINE:45
-// @LINE:44
 // @LINE:43
+// @LINE:42
 // @LINE:41
 // @LINE:40
 // @LINE:39
@@ -362,11 +380,11 @@ def deleteClimateService(): Call = {
 // @LINE:6
 package controllers.javascript {
 
-// @LINE:48
+// @LINE:50
 class ReverseAssets {
     
 
-// @LINE:48
+// @LINE:50
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -590,13 +608,13 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:47
+// @LINE:46
 // @LINE:45
-// @LINE:44
-// @LINE:43
 class ReverseDatasetController {
     
 
-// @LINE:45
+// @LINE:47
 def getSearchResult : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.getSearchResult",
    """
@@ -607,7 +625,7 @@ def getSearchResult : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:44
+// @LINE:46
 def searchDataset : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.searchDataset",
    """
@@ -618,7 +636,7 @@ def searchDataset : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:43
+// @LINE:45
 def datasetList : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.DatasetController.datasetList",
    """
@@ -632,6 +650,8 @@ def datasetList : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:43
+// @LINE:42
 // @LINE:41
 // @LINE:40
 // @LINE:39
@@ -649,7 +669,7 @@ def datasetList : JavascriptReverseRoute = JavascriptReverseRoute(
 class ReverseClimateServiceController {
     
 
-// @LINE:40
+// @LINE:42
 def addClimateServices : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.addClimateServices",
    """
@@ -660,7 +680,7 @@ def addClimateServices : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:33
+// @LINE:35
 def mostRecentlyAddedClimateServices : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.mostRecentlyAddedClimateServices",
    """
@@ -671,7 +691,7 @@ def mostRecentlyAddedClimateServices : JavascriptReverseRoute = JavascriptRevers
 )
                         
 
-// @LINE:39
+// @LINE:41
 def editClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.editClimateService",
    """
@@ -682,7 +702,7 @@ def editClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:35
+// @LINE:37
 def mostPopularClimateServices : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.mostPopularClimateServices",
    """
@@ -693,7 +713,7 @@ def mostPopularClimateServices : JavascriptReverseRoute = JavascriptReverseRoute
 )
                         
 
-// @LINE:31
+// @LINE:33
 def tutorial : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.tutorial",
    """
@@ -704,7 +724,7 @@ def tutorial : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:41
+// @LINE:43
 def oneService : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.oneService",
    """
@@ -715,7 +735,18 @@ def oneService : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:38
+// @LINE:31
+def searchClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ClimateServiceController.searchClimateService",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "climate/searchClimateServices"})
+      }
+   """
+)
+                        
+
+// @LINE:40
 def downloadClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.downloadClimateService",
    """
@@ -726,7 +757,7 @@ def downloadClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:34
+// @LINE:36
 def mostRecentlyUsedClimateServices : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.mostRecentlyUsedClimateServices",
    """
@@ -737,7 +768,7 @@ def mostRecentlyUsedClimateServices : JavascriptReverseRoute = JavascriptReverse
 )
                         
 
-// @LINE:32
+// @LINE:34
 def climateServices : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.climateServices",
    """
@@ -748,7 +779,7 @@ def climateServices : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:36
+// @LINE:38
 def newClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.newClimateService",
    """
@@ -760,6 +791,17 @@ def newClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
                         
 
 // @LINE:30
+def getSearchResult : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ClimateServiceController.getSearchResult",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "climate/getcssearchresult"})
+      }
+   """
+)
+                        
+
+// @LINE:32
 // @LINE:7
 // @LINE:6
 def home : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -780,7 +822,7 @@ def home : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:37
+// @LINE:39
 def deleteClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.deleteClimateService",
    """
@@ -797,10 +839,12 @@ def deleteClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:48
+// @LINE:50
+// @LINE:47
+// @LINE:46
 // @LINE:45
-// @LINE:44
 // @LINE:43
+// @LINE:42
 // @LINE:41
 // @LINE:40
 // @LINE:39
@@ -834,11 +878,11 @@ def deleteClimateService : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:48
+// @LINE:50
 class ReverseAssets {
     
 
-// @LINE:48
+// @LINE:50
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -977,25 +1021,25 @@ def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:47
+// @LINE:46
 // @LINE:45
-// @LINE:44
-// @LINE:43
 class ReverseDatasetController {
     
 
-// @LINE:45
+// @LINE:47
 def getSearchResult(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.DatasetController.getSearchResult(), HandlerDef(this, "controllers.DatasetController", "getSearchResult", Seq(), "GET", """""", _prefix + """climate/getSearchResult""")
 )
                       
 
-// @LINE:44
+// @LINE:46
 def searchDataset(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.DatasetController.searchDataset(), HandlerDef(this, "controllers.DatasetController", "searchDataset", Seq(), "GET", """""", _prefix + """climate/searchDataSet""")
 )
                       
 
-// @LINE:43
+// @LINE:45
 def datasetList(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.DatasetController.datasetList(), HandlerDef(this, "controllers.DatasetController", "datasetList", Seq(), "GET", """Keyword search""", _prefix + """climate/datasets""")
 )
@@ -1004,6 +1048,8 @@ def datasetList(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:43
+// @LINE:42
 // @LINE:41
 // @LINE:40
 // @LINE:39
@@ -1021,63 +1067,75 @@ def datasetList(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 class ReverseClimateServiceController {
     
 
-// @LINE:40
+// @LINE:42
 def addClimateServices(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.addClimateServices(), HandlerDef(this, "controllers.ClimateServiceController", "addClimateServices", Seq(), "GET", """""", _prefix + """climateService/addClimateService""")
 )
                       
 
-// @LINE:33
+// @LINE:35
 def mostRecentlyAddedClimateServices(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.mostRecentlyAddedClimateServices(), HandlerDef(this, "controllers.ClimateServiceController", "mostRecentlyAddedClimateServices", Seq(), "GET", """""", _prefix + """climate/mostRecentlyAddedClimateServices""")
 )
                       
 
-// @LINE:39
+// @LINE:41
 def editClimateService(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.editClimateService(), HandlerDef(this, "controllers.ClimateServiceController", "editClimateService", Seq(), "POST", """""", _prefix + """climate/edit/climateServices""")
 )
                       
 
-// @LINE:35
+// @LINE:37
 def mostPopularClimateServices(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.mostPopularClimateServices(), HandlerDef(this, "controllers.ClimateServiceController", "mostPopularClimateServices", Seq(), "GET", """""", _prefix + """climate/mostPopularClimateServices""")
 )
                       
 
-// @LINE:31
+// @LINE:33
 def tutorial(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.tutorial(), HandlerDef(this, "controllers.ClimateServiceController", "tutorial", Seq(), "GET", """""", _prefix + """climate/tutorial""")
 )
                       
 
-// @LINE:41
+// @LINE:43
 def oneService(url:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.oneService(url), HandlerDef(this, "controllers.ClimateServiceController", "oneService", Seq(classOf[String]), "GET", """""", _prefix + """climate/oneService""")
 )
                       
 
-// @LINE:38
+// @LINE:31
+def searchClimateService(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ClimateServiceController.searchClimateService(), HandlerDef(this, "controllers.ClimateServiceController", "searchClimateService", Seq(), "GET", """""", _prefix + """climate/searchClimateServices""")
+)
+                      
+
+// @LINE:40
 def downloadClimateService(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.downloadClimateService(), HandlerDef(this, "controllers.ClimateServiceController", "downloadClimateService", Seq(), "POST", """""", _prefix + """climate/download/climateServices""")
 )
                       
 
-// @LINE:34
+// @LINE:36
 def mostRecentlyUsedClimateServices(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.mostRecentlyUsedClimateServices(), HandlerDef(this, "controllers.ClimateServiceController", "mostRecentlyUsedClimateServices", Seq(), "GET", """""", _prefix + """climate/mostRecentlyUsedClimateServices""")
 )
                       
 
-// @LINE:32
+// @LINE:34
 def climateServices(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.climateServices(), HandlerDef(this, "controllers.ClimateServiceController", "climateServices", Seq(), "GET", """""", _prefix + """climate/climateServices""")
 )
                       
 
-// @LINE:36
+// @LINE:38
 def newClimateService(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.newClimateService(), HandlerDef(this, "controllers.ClimateServiceController", "newClimateService", Seq(), "POST", """""", _prefix + """climate/new/climateServices""")
+)
+                      
+
+// @LINE:30
+def getSearchResult(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ClimateServiceController.getSearchResult(), HandlerDef(this, "controllers.ClimateServiceController", "getSearchResult", Seq(), "GET", """ Climate Model""", _prefix + """climate/getcssearchresult""")
 )
                       
 
@@ -1087,7 +1145,7 @@ def home(email:String, vfile:String, dataset:String): play.api.mvc.HandlerRef[_]
 )
                       
 
-// @LINE:37
+// @LINE:39
 def deleteClimateService(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClimateServiceController.deleteClimateService(), HandlerDef(this, "controllers.ClimateServiceController", "deleteClimateService", Seq(), "POST", """""", _prefix + """climate/delete/climateServices""")
 )

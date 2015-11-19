@@ -399,6 +399,48 @@ public class ClimateServiceController extends Controller {
 
         return ok(result);
     }
+    
+   //newly added
+	public static final String WILDCARD = "%";
+	public Result queryClimateServices() {
+    	JsonNode json = request().body().asJson();
+    	if (json == null) {
+    		System.out.println("Datasets cannot be queried, expecting Json data");
+    		return badRequest("Datasets cannot be queried, expecting Json data");
+    	}
+    	String result = new String();
+    	try {
+    		//Parse JSON file
+    		String name = json.path("name").asText();
+    		System.out.println(name);
+    		if (name.isEmpty()) {
+    			name = WILDCARD;
+    		}
+    		else {
+    			name = WILDCARD+name+WILDCARD;
+    		}
+
+    		List<ClimateService> climateServices = new ArrayList<ClimateService>();
+			// ClimateService newService = new ClimateService(1, null, "service", "service", "service", "service", null, "service");
+			// climateServices.add(newService);
+    		
+    		// List<Dataset> datasets;
+    		// if (source.isEmpty()) {
+    		// 	datasets = datasetRepository.findDataset(name, agencyId, gridDimension, physicalVariable, startTime, endTime);
+    					
+    		// } else {
+    		// 	datasets = datasetRepository.findDatasetWithInstrument(name, agencyId, gridDimension, physicalVariable, source, startTime, endTime);
+    		// }
+    		// result = new Gson().toJson(datasets);
+    		climateServices = climateServiceRepository.findByKeyWord(name);
+    		result = new Gson().toJson(climateServices);
+    	} catch (Exception e) {
+    		System.out.println("ServiceExecutionLog cannot be queried, query is corrupt");
+    		return badRequest("ServiceExecutionLog cannot be queried, query is corrupt");
+    	}
+
+    	return ok(result);
+    }
 
     // get rates   (need implement link to database)
     public Result getAllClimateServicesRate(String format){

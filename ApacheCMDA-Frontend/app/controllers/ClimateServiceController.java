@@ -36,8 +36,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class ClimateServiceController extends Controller {
@@ -75,6 +74,30 @@ public class ClimateServiceController extends Controller {
 	public static Result mostPopularClimateServices() {
 		return ok(mostPopularServices.render(ClimateService.getMostPopular(),
 				climateServiceForm));
+	}
+
+	//newly added
+	public static Result searchClimateService() {
+		return ok(searchClimateService.render(climateServiceForm));
+	}
+
+	//newly added
+	public static Result getSearchResult(){
+		Form<ClimateService> dc = climateServiceForm.bindFromRequest();
+		ObjectNode jsonData = Json.newObject();
+		String serviceName = "";
+		
+
+		serviceName = dc.field("Service Name").value();
+		System.out.println(serviceName);
+			
+		List<ClimateService> response = ClimateService.queryClimateService(serviceName);
+		List<ClimateService> filteredResponse = new ArrayList<ClimateService>();
+		for(int i = 0; i < Math.min(3, response.size()); i++) {
+			filteredResponse.add(response.get(i));
+			System.out.println(response.get(i).getUrl());
+		}
+		return ok(climateServiceList.render(filteredResponse, climateServiceForm));
 	}
 
 	public static Result newClimateService() {

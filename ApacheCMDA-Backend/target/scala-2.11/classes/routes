@@ -7,6 +7,7 @@
 # GET     /                           @controllers.Application.index
 
 # Climate Service
+POST		  /climateService/queryClimateService														@controllers.ClimateServiceController.queryClimateServices
 GET           /climateService/getClimateService/:name/json                                              @controllers.ClimateServiceController.getClimateService(name: String, format: String="json")
 GET           /climateService/getClimateService/id/:id                                                  @controllers.ClimateServiceController.getClimateServiceById(id: Long)
 GET           /climateService/getAllClimateServices/json                                                @controllers.ClimateServiceController.getAllClimateServices(format: String="json")
