@@ -33,6 +33,7 @@ import util.APICall.ResponseType;
 import views.html.climate.*;
 
 public class Application extends Controller {
+	private static final String GET_CLIMATE_RATE_CALL = Constants.NEW_BACKEND+"climateService/getAllClimateServicesRate/json";
 	
 	final static Form<Comment> commentForm = Form.form(Comment.class);
 	final static Form<User> userForm = Form
@@ -55,8 +56,6 @@ public class Application extends Controller {
 	    	jsonData.put("password", password);
 	    	System.out.println(email + "***************" + password);
 	    	// POST Climate Service JSON data
-	    	// System.out.println("vurl: " + Constants.URL_HOST + Constants.CMU_BACKEND_PORT 
-	    				// + Constants.IS_USER_VALID);
 	    	JsonNode response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT 
 	    				+ Constants.IS_USER_VALID, jsonData);
 	        if (response.get("success") == null) {
@@ -90,21 +89,20 @@ public class Application extends Controller {
 	}
 
 	public static Result createNewComment(){
-		System.out.println("!!!!!!!!!!!!!!!!!");
-
 		Form<Comment> nc = commentForm.bindFromRequest();
 
 		ObjectNode jsonData = Json.newObject();
-
-		System.out.println(nc.field("drop_service").value());
-
 
 		try{
     		jsonData.put("serviceName", nc.field("drop_service").value());
 			jsonData.put("rate", nc.field("drop_rating").value());
 			jsonData.put("comment", nc.field("comment").value());
+			jsonData.put("at_tag",nc.field("at_tag").value());
+			jsonData.put("hash_tag",nc.field("hash_tag").value());
+
+			System.out.println(jsonData);
 			
-			 JsonNode response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT 
+			JsonNode response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT 
 			 		+ Constants.ADD_COMMENT, jsonData);
 
 //			 flash the response message
@@ -144,6 +142,26 @@ public class Application extends Controller {
 			Entry<String, JsonNode> field = it.next();
 			flash(field.getKey(),field.getValue().asText());	
 		}
+    }
+
+    public static Result getAllHashtag() {
+    	
+        ObjectNode response = Json.newObject();
+        
+        JsonNode climateServicesRateNode = APICall.callAPI(GET_CLIMATE_RATE_CALL);
+
+        System.out.println(climateServicesRateNode);
+
+        System.out.println("getallhashtag*************************");
+        String hashtag="";
+        for (int i = 0; i < climateServicesRateNode.size(); i++) {
+            JsonNode json = climateServicesRateNode.path(i);
+            hashtag += json.path("hashtag").asText() + ";";
+        }
+        System.out.println("Application: " + hashtag);
+        response.put("hash_tag", hashtag);
+        System.out.println(response);
+        return ok(response);
     }
     
     public static Result signup() {

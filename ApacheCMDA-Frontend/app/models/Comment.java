@@ -14,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package models;
 
 import javax.persistence.Entity;
@@ -33,6 +34,8 @@ public class Comment {
 	private String comment;
 	private String rate;
 	private String serviceName;
+	private String hashtag;
+	private String atUser;
 	
 	
 
@@ -44,11 +47,29 @@ public class Comment {
 
 	}
 
-	public Comment(String comment, String rate, String serviceName) {
+	public Comment(String comment, String rate, String serviceName, String hashtag, String atUser) {
 		super();
 		this.comment = comment;
 		this.rate = rate;
 		this.serviceName = serviceName;
+		this.hashtag = hashtag;
+		this.atUser = atUser;
+	}
+
+	public String getAtUser(){
+		return this.atUser;
+	}
+
+	public void setAtUser(String atUser){
+		this.atUser = atUser;
+	}
+
+	public String getHashTag(){
+		return this.hashtag;
+	}
+
+	public String setHashTag(String hashtag){
+		return this.hashtag;
 	}
 
 	public void setServiceName(String serviceName){

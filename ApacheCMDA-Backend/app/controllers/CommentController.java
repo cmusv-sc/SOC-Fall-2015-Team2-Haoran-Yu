@@ -46,7 +46,7 @@ public class CommentController extends Controller {
 		this.commentRepository = commentRepository;
 	}
 
-	public Result addComment() {
+    public Result addComment() {
         System.out.println("hi,every one");
 		JsonNode json = request().body().asJson();
 		if (json == null) {
@@ -54,14 +54,18 @@ public class CommentController extends Controller {
 			return badRequest("comment not created, expecting Json data");
 		}
 
+
+		System.out.println(json);
+
 		// Parse JSON file
 		String serviceName = json.path("serviceName").asText();
 		String rate = json.path("rate").asText();
 		String commentStr = json.path("comment").asText();
-		
+		String hashtag = json.path("hash_tag").asText();
+        String at = json.path("at_tag").asText();
 
 		try {
-			Comment comment = new Comment(serviceName, rate, commentStr);
+			Comment comment = new Comment(serviceName, rate, commentStr,hashtag, at);
 			commentRepository.save(comment);
 			System.out.println("comment saved: " + comment.getId());
 			return created(new Gson().toJson(comment.getId()));
@@ -72,8 +76,6 @@ public class CommentController extends Controller {
 		}
 	}
 
-
-	
 	public Result getAllComments(String format) {
 		Iterable<Comment> commentIterable = commentRepository.findAll();
 		List<Comment> commentList = new ArrayList<Comment>();

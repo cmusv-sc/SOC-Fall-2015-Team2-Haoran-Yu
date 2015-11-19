@@ -66,69 +66,16 @@ public class ClimateServiceController extends Controller {
         this.serviceEntryRepository = serviceEntryRepository;
         this.commentRepository = commentRepository;
 	}
-
-	// public Result addClimateService() {
-	// 	JsonNode json = request().body().asJson();
-	// 	if (json == null) {
-	// 		System.out
-	// 				.println("Climate service not saved, expecting Json data");
-	// 		return badRequest("Climate service not saved, expecting Json data");
-	// 	}
-
-	// 	// Parse JSON file
-	// 	long rootServiceId = json.findPath("rootServiceId").asLong();
-	// 	String creatorEmail = json.findPath("creatorEmail").asText();
-	// 	String name = json.findPath("name").asText();
-	// 	String purpose = json.findPath("purpose").asText();
-	// 	String url = json.findPath("url").asText();
-	// 	String scenario = json.findPath("scenario").asText();
-	// 	Date createTime = new Date();
-	// 	SimpleDateFormat format = new SimpleDateFormat(Common.DATE_PATTERN);
-	// 	try {
-	// 		createTime = format.parse(json.findPath("createTime").asText());
-	// 	} catch (ParseException e) {
-	// 		System.out
-	// 				.println("No creation date specified, set to current time");
-	// 	}
-	// 	String versionNo = json.findPath("versionNo").asText();
-
-	// 	try {
-	// 		User user = userRepository.findByEmail(creatorEmail);
-	// 		ClimateService climateService = new ClimateService(rootServiceId,
-	// 				user, name, purpose, url, scenario, createTime, versionNo);
-	// 		ClimateService savedClimateService = climateServiceRepository
-	// 				.save(climateService);
-	// 		String registerNote = "ClimateService Name: " + savedClimateService.getName() + ", VersionNo: "+versionNo;
-	// 		ServiceEntry serviceEntry = new ServiceEntry(createTime, versionNo, user, createTime, registerNote, initialcount, savedClimateService);
-	// 		serviceEntryRepository.save(serviceEntry);
-	// 		System.out.println("Climate Service saved: "
-	// 				+ savedClimateService.getName());
-	// 		return created(new Gson().toJson(savedClimateService.getId()));
-	// 	} catch (PersistenceException pe) {
-	// 		pe.printStackTrace();
-	// 		System.out.println("Climate Service not saved: " + name);
-	// 		return badRequest("Climate Service not saved: " + name);
-	// 	}
-	// }
 	
 	public Result addClimateService() {
-
 		ClimateService oldService = climateServiceRepository.findFirstByName("2-D-Variable-Zonal-Mean");
-		// User oldUser = userRepository.findByUserName(oldService.get);
-		ClimateService newService = new ClimateService(oldService.getId(), oldService.getUser(),
-			oldService.getName(), oldService.getPurpose(), oldService.getUrl(), oldService.getScenario(),
-			oldService.getCreateTime(), oldService.getVersionNo());
-		oldService.setVersionNo("2");
+		oldService.setVersionNo("3");
 		oldService.setName("2-D-Variable-Map");
 		try {
 			System.out.println("new service created!");
 
 			ClimateService savedClimateService = climateServiceRepository
 					.save(oldService);
-			// String registerNote = "ClimateService Name: " + savedClimateService.getName() + ", VersionNo: "+versionNo;
-			// ServiceEntry serviceEntry = new ServiceEntry(createTime, versionNo, user, createTime, registerNote, initialcount, savedClimateService);
-			// serviceEntryRepository.save(serviceEntry);
-
 			System.out.println("Climate Service saved: "
 					+ savedClimateService.getName());
 			return created(new Gson().toJson(savedClimateService.getId()));
@@ -450,17 +397,6 @@ public class ClimateServiceController extends Controller {
     		}
 
     		List<ClimateService> climateServices = new ArrayList<ClimateService>();
-			// ClimateService newService = new ClimateService(1, null, "service", "service", "service", "service", null, "service");
-			// climateServices.add(newService);
-    		
-    		// List<Dataset> datasets;
-    		// if (source.isEmpty()) {
-    		// 	datasets = datasetRepository.findDataset(name, agencyId, gridDimension, physicalVariable, startTime, endTime);
-    					
-    		// } else {
-    		// 	datasets = datasetRepository.findDatasetWithInstrument(name, agencyId, gridDimension, physicalVariable, source, startTime, endTime);
-    		// }
-    		// result = new Gson().toJson(datasets);
     		climateServices = climateServiceRepository.findByKeyWord(name);
     		result = new Gson().toJson(climateServices);
     	} catch (Exception e) {
@@ -494,8 +430,6 @@ public class ClimateServiceController extends Controller {
     }
 
     public Result getAllClimateServicesOrderByCount(String format){
-//        Iterable<ClimateService> climateServices = climateServiceRepository
-//                .findByOrderByCreateTimeDesc();
         Iterable<ClimateService> climateServices = climateServiceRepository.getClimateServiceOrderByCount();
         if (climateServices == null) {
             System.out.println("No climate service found");

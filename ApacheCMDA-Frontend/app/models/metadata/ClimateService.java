@@ -246,6 +246,7 @@ public class ClimateService {
 
 		JsonNode climateServicesRateNode = APICall
 				.callAPI(GET_CLIMATE_RATE_CALL);
+		System.out.println("jsonnode:" + climateServicesRateNode);
 
 		if (climateServicesRateNode == null || climateServicesRateNode.has("error")
 				|| !climateServicesRateNode.isArray()) {
@@ -390,6 +391,7 @@ public class ClimateService {
 	 * @return the response from the API server
 	 */
 	public static JsonNode create(JsonNode jsonData) {
+		System.out.println("frontend create!!!");
 		return APICall.postAPI(ADD_CLIMATE_SERVICE_CALL, jsonData);
 	}
 

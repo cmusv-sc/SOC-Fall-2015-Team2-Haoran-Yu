@@ -14,6 +14,7 @@ GET		/createSuccess				controllers.Application.createSuccess()
 POST	/isEmailExisted				controllers.Application.isEmailExisted()
 GET     /comment                    controllers.Application.comment()
 GET     /createNewComment			controllers.Application.createNewComment()
+GET     /getAllHashtag				controllers.Application.getAllHashtag()
 
 # BugReporting
 GET         /bugs                                                controllers.BugReportController.reports()

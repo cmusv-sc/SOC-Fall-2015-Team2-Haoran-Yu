@@ -1,8 +1,49 @@
 @(commentForm: play.data.Form[models.Comment])
 @import helper._
 
+@scripts={
+	<script src='@routes.Assets.at("javascripts/edit_button.js")'></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+	<script type="text/javascript">
 
-@main("Comment") {  
+
+		function getAllHashtag(){
+			$.ajax({
+					url: "/getAllHashtag",
+					dataType: "json"
+				}).done(function(data) {
+					console.log(data);
+					var response = data['item'];
+					return response.split(";");
+					
+				});
+		}
+
+
+		$(function() {
+
+			var availableDataSetNames = [
+	                "AIRS Air Temperature",
+					"interim Sea Surface Temperature",
+					"interim Total Cloud Fraction",
+					"interim Vertical Wind Velocity" ];
+					
+			var allHashTag = getAllHashtag();
+
+			$("#hash_tag").autocomplete({
+				source : allHashTag
+			});
+
+			$("#at_tag").autocomplete({
+				source : availableDataSetNames
+			});
+		});
+	</script>
+}
+
+@main("Comment",scripts) {  
 	
 	@helper.form(action = routes.Application.createNewComment) {
 <div class="container"
@@ -47,6 +88,21 @@
 					</div>
 			</div>
 
+			<div class="row">
+					<div class="form-group">
+						@inputText(commentForm("at_tag"), 'class -> "form-control", 'id -> "at_tag", 'placeholder -> "@", 'size->70)
+					</div>
+			</div>
+
+			
+			<div class="row">
+					<div class="form-group">
+					@inputText(commentForm("hash_tag"), 'class -> "form-control", 'id -> "hash_tag", 'placeholder -> "#", 'size->70)
+
+						<!-- <input type="text" name="hash_tag" id="hash_tag" class="form-control"
+							placeholder="#" required="" value='@commentForm("hash_tag").value' onchange=""> -->
+					</div>
+			</div>			
 
 			<div class="row">
 					<div class="form-group">

@@ -30,7 +30,8 @@ public class Comment {
     private String serviceName;
     private String rate;
     private String comment;
-   
+    private String hashtag;
+    private String at;
     
     // @OneToMany(mappedBy = "user", cascade={CascadeType.ALL})
     // private Set<ClimateService> climateServices = new
@@ -39,11 +40,13 @@ public class Comment {
     public Comment() {
     }
     
-    public Comment(String serviceName, String rate, String comment) {
+    public Comment(String serviceName, String rate, String comment, String hashtag, String at) {
         super();
         this.serviceName = serviceName;
         this.rate = rate;
         this.comment = comment;
+        this.hashtag=hashtag;
+        this.at=at;
         
     }
     
@@ -75,11 +78,28 @@ public class Comment {
         this.comment = comment;
     }
     
+    
+    public String getHashtag() {
+        return hashtag;
+    }
+    
+    public void setHashtag(String hashtag) {
+        this.hashtag = hashtag;
+    }
+    
+    
+    public String getAt() {
+        return at;
+    }
+    
+    public void setAt(String at) {
+        this.at = at;
+    }
+    
     @Override
     public String toString() {
         return "Comment [id=" + id + ", serviceName=" + serviceName + ", rate="
-        + rate + ", comment=" + comment + "]";
+        + rate + ", comment=" + comment + ", hashtag=" + hashtag + ", at=" + at + "]";
     }
     
 }
-

@@ -30,6 +30,5 @@ import javax.inject.Singleton;
 @Named
 @Singleton
 public interface CommentRepository extends CrudRepository<Comment, Long> {
-	List<Comment> findAll();
-	
+	// List<Comment> findAll();
 }
