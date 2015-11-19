@@ -57,7 +57,15 @@ public class ClimateServiceController extends Controller {
 	}
 
 	public static Result climateServices() {
-		return ok(climateServices.render(ClimateService.all(),
+		// return ok(climateServices.render(ClimateService.all(),
+		// 		climateServiceForm));
+		List<List<ClimateService>> services = new ArrayList<List<ClimateService>>();
+		HashMap<String, List<ClimateService>> map = ClimateService.allForVersions();
+		for(String serviceName: map.keySet()) {
+			List<ClimateService> list = map.get(serviceName);
+			services.add(list);
+		}
+		return ok(climateServices.render(services,
 				climateServiceForm));
 	}
 	
@@ -121,9 +129,9 @@ public class ClimateServiceController extends Controller {
 			jsonData.put("scenario", dc.field("Scenario").value());
 			jsonData.put("versionNo", dc.field("Version").value());
 			jsonData.put("rootServiceId", dc.field("Root_Service").value());
-//			JsonNode response = ClimateService.create(jsonData);
-            JsonNode response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT
-                                                + Constants.ADD_CLIMATE, jsonData);
+			JsonNode response = ClimateService.create(jsonData);
+            // JsonNode response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT
+            //                                     + Constants.ADD_CLIMATE, jsonData);
 			Application.flashMsg(response);
 		} catch (IllegalStateException e) {
 			e.printStackTrace();

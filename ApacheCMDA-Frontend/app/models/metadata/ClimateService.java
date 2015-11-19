@@ -147,6 +147,42 @@ public class ClimateService {
 		return null;
 	}
 
+	public static HashMap<String, List<ClimateService>> allForVersions() {
+
+		HashMap<String, List<ClimateService>> climateServices = new HashMap<String, List<ClimateService>>();
+
+		JsonNode climateServicesNode = APICall
+				.callAPI(GET_CLIMATE_SERVICES_CALL);
+
+		if (climateServicesNode == null || climateServicesNode.has("error")
+				|| !climateServicesNode.isArray()) {
+			return climateServices;
+		}
+
+		for (int i = 0; i < climateServicesNode.size(); i++) {
+			JsonNode json = climateServicesNode.path(i);
+			ClimateService newService = new ClimateService();
+			newService.setId(json.path("id").asText());
+			newService.setClimateServiceName(json.get(
+					"name").asText());
+			newService.setPurpose(json.path("purpose").asText());
+			newService.setUrl(json.path("url").asText());
+			//newService.setCreateTime(json.path("createTime").asText());
+			newService.setScenario(json.path("scenario").asText());
+			newService.setVersion(json.path("versionNo").asText());
+			newService.setRootservice(json.path("rootServiceId").asText());
+			// climateServices.add(newService);
+
+			String serviceName = newService.getClimateServiceName();
+			List<ClimateService> list = climateServices.containsKey(serviceName)?
+			climateServices.get(serviceName) : new ArrayList<ClimateService>();
+			list.add(newService);
+			climateServices.put(serviceName, list);
+
+		}
+		return climateServices;
+	}
+
     //newly added
 	public static List<ClimateService> queryClimateService(String climateServiceName) {
 		

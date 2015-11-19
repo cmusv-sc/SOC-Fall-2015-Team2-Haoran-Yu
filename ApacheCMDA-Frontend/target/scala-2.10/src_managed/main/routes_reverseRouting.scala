@@ -1,6 +1,6 @@
 // @SOURCE:/Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Frontend/conf/routes
-// @HASH:655d902ffe4285e02e945a207dcdd45222dc8793
-// @DATE:Wed Nov 18 21:51:48 EST 2015
+// @HASH:bd4a9e96ac480ef002bc16aa3870ca9158abffbb
+// @DATE:Wed Nov 18 22:22:51 EST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -242,7 +242,7 @@ class ReverseClimateServiceController {
 
 // @LINE:42
 def addClimateServices(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "climateService/addClimateService")
+   Call("GET", _prefix + { _defaultPrefix } + "climate/new/climateServices")
 }
                                                 
 
@@ -674,7 +674,7 @@ def addClimateServices : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClimateServiceController.addClimateServices",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "climateService/addClimateService"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "climate/new/climateServices"})
       }
    """
 )
@@ -1069,7 +1069,7 @@ class ReverseClimateServiceController {
 
 // @LINE:42
 def addClimateServices(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.ClimateServiceController.addClimateServices(), HandlerDef(this, "controllers.ClimateServiceController", "addClimateServices", Seq(), "GET", """""", _prefix + """climateService/addClimateService""")
+   controllers.ClimateServiceController.addClimateServices(), HandlerDef(this, "controllers.ClimateServiceController", "addClimateServices", Seq(), "GET", """""", _prefix + """climate/new/climateServices""")
 )
                       
 
