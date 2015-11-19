@@ -100,15 +100,15 @@ public class Application extends Controller {
 
 
 		try{
-    		jsonData.put("serviceNaem", nc.field("drop_service").value());
+    		jsonData.put("serviceName", nc.field("drop_service").value());
 			jsonData.put("rate", nc.field("drop_rating").value());
 			jsonData.put("comment", nc.field("comment").value());
 			
-			// JsonNode response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT 
-			// 		+ Constants.ADD_USER, jsonData);
+			 JsonNode response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT 
+			 		+ Constants.ADD_COMMENT, jsonData);
 
-			// flash the response message
-			// Application.flashMsg(response);
+//			 flash the response message
+			 Application.flashMsg(response);
 			return redirect(routes.ClimateServiceController.climateServices());
     		
     	}catch (IllegalStateException e) {

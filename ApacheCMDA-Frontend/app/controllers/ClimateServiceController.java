@@ -98,7 +98,9 @@ public class ClimateServiceController extends Controller {
 			jsonData.put("scenario", dc.field("Scenario").value());
 			jsonData.put("versionNo", dc.field("Version").value());
 			jsonData.put("rootServiceId", dc.field("Root_Service").value());
-			JsonNode response = ClimateService.create(jsonData);
+//			JsonNode response = ClimateService.create(jsonData);
+            JsonNode response = APICall.postAPI(Constants.URL_HOST + Constants.CMU_BACKEND_PORT
+                                                + Constants.ADD_CLIMATE, jsonData);
 			Application.flashMsg(response);
 		} catch (IllegalStateException e) {
 			e.printStackTrace();

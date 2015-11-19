@@ -1,6 +1,6 @@
-// @SOURCE:/Users/Tongyun/Desktop/SOC-Fall-2015-master/ApacheCMDA-Backend/conf/routes
-// @HASH:4121e025d53351f7a3cf9024840a73feee42390d
-// @DATE:Wed Nov 18 01:31:14 EST 2015
+// @SOURCE:/Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/conf/routes
+// @HASH:ec9d41ba39c5994cd582330f7db4d317039584d9
+// @DATE:Wed Nov 18 12:38:42 EST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,7 +15,9 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:61
+// @LINE:69
+// @LINE:64
+// @LINE:62
 // @LINE:58
 // @LINE:57
 // @LINE:56
@@ -58,11 +60,11 @@ import Router.queryString
 // @LINE:10
 package controllers {
 
-// @LINE:61
+// @LINE:69
 class ReverseAssets {
 
 
-// @LINE:61
+// @LINE:69
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -250,6 +252,28 @@ def addParameter(): Call = {
 }
                           
 
+// @LINE:64
+// @LINE:62
+class ReverseCommentController {
+
+
+// @LINE:62
+def addComment(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "comments/add")
+}
+                        
+
+// @LINE:64
+def getAllComments(): Call = {
+   implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
+   Call("GET", _prefix + { _defaultPrefix } + "users/getAllComment/json")
+}
+                        
+
+}
+                          
+
 // @LINE:39
 // @LINE:38
 // @LINE:37
@@ -425,7 +449,9 @@ def deleteClimateServiceByName(name:String): Call = {
                   
 
 
-// @LINE:61
+// @LINE:69
+// @LINE:64
+// @LINE:62
 // @LINE:58
 // @LINE:57
 // @LINE:56
@@ -469,11 +495,11 @@ def deleteClimateServiceByName(name:String): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
-// @LINE:61
+// @LINE:69
 class ReverseAssets {
 
 
-// @LINE:61
+// @LINE:69
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -745,6 +771,36 @@ def addParameter : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:64
+// @LINE:62
+class ReverseCommentController {
+
+
+// @LINE:62
+def addComment : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.CommentController.addComment",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "comments/add"})
+      }
+   """
+)
+                        
+
+// @LINE:64
+def getAllComments : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.CommentController.getAllComments",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/getAllComment/json"})
+      }
+   """
+)
+                        
+
+}
+              
+
 // @LINE:39
 // @LINE:38
 // @LINE:37
@@ -1000,7 +1056,9 @@ def deleteClimateServiceByName : JavascriptReverseRoute = JavascriptReverseRoute
         
 
 
-// @LINE:61
+// @LINE:69
+// @LINE:64
+// @LINE:62
 // @LINE:58
 // @LINE:57
 // @LINE:56
@@ -1044,11 +1102,11 @@ def deleteClimateServiceByName : JavascriptReverseRoute = JavascriptReverseRoute
 package controllers.ref {
 
 
-// @LINE:61
+// @LINE:69
 class ReverseAssets {
 
 
-// @LINE:61
+// @LINE:69
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -1209,6 +1267,26 @@ def deleteParameterByName(id:Long, name:String): play.api.mvc.HandlerRef[_] = ne
 // @LINE:45
 def addParameter(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.ParameterController]).addParameter(), HandlerDef(this.getClass.getClassLoader, "", "controllers.ParameterController", "addParameter", Seq(), "POST", """""", _prefix + """parameter/addParameter""")
+)
+                      
+
+}
+                          
+
+// @LINE:64
+// @LINE:62
+class ReverseCommentController {
+
+
+// @LINE:62
+def addComment(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.CommentController]).addComment(), HandlerDef(this.getClass.getClassLoader, "", "controllers.CommentController", "addComment", Seq(), "POST", """ Comment""", _prefix + """comments/add""")
+)
+                      
+
+// @LINE:64
+def getAllComments(format:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   play.api.Play.maybeApplication.map(_.global).getOrElse(play.api.DefaultGlobal).getControllerInstance(classOf[controllers.CommentController]).getAllComments(format), HandlerDef(this.getClass.getClassLoader, "", "controllers.CommentController", "getAllComments", Seq(classOf[String]), "GET", """""", _prefix + """users/getAllComment/json""")
 )
                       
 

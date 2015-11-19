@@ -1,6 +1,6 @@
-// @SOURCE:/Users/Tongyun/Desktop/SOC-Fall-2015-master/ApacheCMDA-Frontend/conf/routes
-// @HASH:b02d5b7b482a6d3f2f4280e97df1c7300a4831f9
-// @DATE:Wed Nov 18 02:07:59 EST 2015
+// @SOURCE:/Users/weitingzhai/Documents/655niubiban/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Frontend/conf/routes
+// @HASH:5a3a4729904cc9b40b47346fb6b211abf0d3ed8f
+// @DATE:Wed Nov 18 18:55:33 EST 2015
 
 package controllers;
 
