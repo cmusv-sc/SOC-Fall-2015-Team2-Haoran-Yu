@@ -8,36 +8,72 @@
   	<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 	<script type="text/javascript">
 
-
+	
+		var all_hash;
+		var all_user;
 		function getAllHashtag(){
-			$.ajax({
+			  $.ajax({
 					url: "/getAllHashtag",
-					dataType: "json"
+					dataType: "json",
+					async : false,
 				}).done(function(data) {
-					console.log(data);
-					var response = data['item'];
-					return response.split(";");
+
+					// alert(data['hash_tag']);
+					// console.log(data['hash_tag']);
+					var response = data['hash_tag'];
+					
+					
+					// console.log("test2");
+					// console.log(v1.length);
+					// console.log(v1[5]);
+					// alert("finished");
+					all_hash = response.split(";");
+					// return;
+					
+				});
+		}
+
+
+		function getAllUser(){
+				$.ajax({
+					url: "/getAllUsers",
+					dataType: "json",
+					async : false,
+				}).done(function(data) {
+
+					// alert(data['hash_tag']);
+					// console.log(data['hash_tag']);
+
+					//不确定tag的名字是啥
+					var response = data['userName'];
+					
+					// console.log("test2");
+					// console.log(v1.length);
+					// console.log(v1[5]);
+					// alert("finished");
+					all_user = response.split(";");
+					// return;
 					
 				});
 		}
 
 
 		$(function() {
-
-			var availableDataSetNames = [
-	                "AIRS Air Temperature",
-					"interim Sea Surface Temperature",
-					"interim Total Cloud Fraction",
-					"interim Vertical Wind Velocity" ];
-					
-			var allHashTag = getAllHashtag();
+			// var availableDataSetNames = [
+	  //               "AIRS Air Temperature",
+			// 		"interim Sea Surface Temperature",
+			// 		"interim Total Cloud Fraction",
+			// 		"interim Vertical Wind Velocity" ];
+	
+			getAllHashtag();
+			getAllUser();
 
 			$("#hash_tag").autocomplete({
-				source : allHashTag
+				source : all_hash
 			});
 
 			$("#at_tag").autocomplete({
-				source : availableDataSetNames
+				source : all_user
 			});
 		});
 	</script>

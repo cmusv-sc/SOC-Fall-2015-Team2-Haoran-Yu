@@ -33,7 +33,8 @@ import util.APICall.ResponseType;
 import views.html.climate.*;
 
 public class Application extends Controller {
-	private static final String GET_CLIMATE_RATE_CALL = Constants.NEW_BACKEND+"climateService/getAllClimateServicesRate/json";
+    private static final String GET_CLIMATE_RATE_CALL = Constants.NEW_BACKEND+"climateService/getAllClimateServicesRate/json";
+	private static final String GET_USER_CALL = Constants.NEW_BACKEND+"UserController/getAllUsers";
 	
 	final static Form<Comment> commentForm = Form.form(Comment.class);
 	final static Form<User> userForm = Form
@@ -48,9 +49,12 @@ public class Application extends Controller {
 	    public Login(){
 	    	System.out.println("login email:" + email);
 	    }
-	    
-	    public String validate() {
+	}
+
+	public static String validate(String email, String password) {
+
 	    	System.out.println("validate!");
+
 	    	ObjectNode jsonData = Json.newObject();
 	    	jsonData.put("email", email);
 	    	jsonData.put("password", password);
@@ -62,7 +66,6 @@ public class Application extends Controller {
 	          return "Invalid user or password";
 	        }
 	        return null;
-	    }
 	}
 
 	public static Result comment(){
@@ -122,17 +125,32 @@ public class Application extends Controller {
 		return ok(comment.render(commentForm));
 	}
 	
-	public static Result authenticate() {
-		// Form<Login> loginForm = Form.form(Login.class).bindFromRequest();
-		Form<Login> loginForm = form.bindFromRequest();
+    public static Result authenticate() {
+		
+		Form<Login> loginForm = Form.form(Login.class).bindFromRequest();
+		// Form<Login> loginForm = form.bindFromRequest();
+
+		String email = loginForm.field("email").value();
+
+		System.out.println("email" + email);
+		String password = loginForm.field("password").value();
+
+		String result = validate(email,password);
+
+		
+		System.out.println("authenticate" + result);
 		System.out.println("*********1");
-	    if (loginForm.hasErrors()) {
+	    if (result != null) {
 	    	System.out.println("*********2");
 	        return badRequest(login.render(loginForm));
 	    } else {
+
+
+	    	System.out.println("authenticate!!!");
+
 	        session().clear();
-	        session("email", loginForm.get().email);
-	        return redirect(routes.ClimateServiceController.home("", "", ""));
+	        session("email", loginForm.field("email").value());
+	        return redirect(routes.ClimateServiceController.home(email, "", ""));
 	    }
 	}
     
@@ -154,9 +172,21 @@ public class Application extends Controller {
 
         System.out.println("getallhashtag*************************");
         String hashtag="";
+
         for (int i = 0; i < climateServicesRateNode.size(); i++) {
             JsonNode json = climateServicesRateNode.path(i);
-            hashtag += json.path("hashtag").asText() + ";";
+
+            String curr = json.path("hashtag").asText();
+
+            if (hashtag.indexOf(curr) == -1) {
+
+            	if (curr.charAt(0) != '#') {
+            		curr = "#" + curr;
+            	}
+
+            	hashtag += curr + ";";	
+            }
+            
         }
         System.out.println("Application: " + hashtag);
         response.put("hash_tag", hashtag);
@@ -168,6 +198,32 @@ public class Application extends Controller {
 		return ok(signup.render(userForm));
 	}
   
+    public static Result getAllUsers() {
+        
+        ObjectNode response = Json.newObject();
+        
+        JsonNode userNode = APICall.callAPI(GET_USER_CALL);
+        
+        System.out.println(userNode);
+        
+        System.out.println("getallUsers*************************");
+        String userName="";
+        for (int i = 0; i < userNode.size(); i++) {
+            JsonNode json = userNode.path(i);
+
+            String currName = json.path("userName").asText();
+
+            if (currName.length() != 0) {
+
+            	userName += "@" + currName + ";";	
+            	System.out.println(currName);
+            }
+        }
+        System.out.println("Application: " + userName);
+        response.put("userName", userName);
+        System.out.println(response);
+        return ok(response);
+    }
     
     public static Result createNewUser(){
     	Form<User> nu = userForm.bindFromRequest();

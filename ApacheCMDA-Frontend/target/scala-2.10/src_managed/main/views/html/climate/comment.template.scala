@@ -35,49 +35,85 @@ Seq[Any](format.raw/*4.11*/("""
   	<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 	<script type="text/javascript">
 
-
-		function getAllHashtag()"""),format.raw/*12.27*/("""{"""),format.raw/*12.28*/("""
-			$.ajax("""),format.raw/*13.11*/("""{"""),format.raw/*13.12*/("""
+	
+		var all_hash;
+		var all_user;
+		function getAllHashtag()"""),format.raw/*14.27*/("""{"""),format.raw/*14.28*/("""
+			  $.ajax("""),format.raw/*15.13*/("""{"""),format.raw/*15.14*/("""
 					url: "/getAllHashtag",
-					dataType: "json"
-				"""),format.raw/*16.5*/("""}"""),format.raw/*16.6*/(""").done(function(data) """),format.raw/*16.28*/("""{"""),format.raw/*16.29*/("""
-					console.log(data);
-					var response = data['item'];
-					return response.split(";");
+					dataType: "json",
+					async : false,
+				"""),format.raw/*19.5*/("""}"""),format.raw/*19.6*/(""").done(function(data) """),format.raw/*19.28*/("""{"""),format.raw/*19.29*/("""
+
+					// alert(data['hash_tag']);
+					// console.log(data['hash_tag']);
+					var response = data['hash_tag'];
 					
-				"""),format.raw/*21.5*/("""}"""),format.raw/*21.6*/(""");
-		"""),format.raw/*22.3*/("""}"""),format.raw/*22.4*/("""
-
-
-		$(function() """),format.raw/*25.16*/("""{"""),format.raw/*25.17*/("""
-
-			var availableDataSetNames = [
-	                "AIRS Air Temperature",
-					"interim Sea Surface Temperature",
-					"interim Total Cloud Fraction",
-					"interim Vertical Wind Velocity" ];
 					
-			var allHashTag = getAllHashtag();
+					// console.log("test2");
+					// console.log(v1.length);
+					// console.log(v1[5]);
+					// alert("finished");
+					all_hash = response.split(";");
+					// return;
+					
+				"""),format.raw/*33.5*/("""}"""),format.raw/*33.6*/(""");
+		"""),format.raw/*34.3*/("""}"""),format.raw/*34.4*/("""
 
-			$("#hash_tag").autocomplete("""),format.raw/*35.32*/("""{"""),format.raw/*35.33*/("""
-				source : allHashTag
-			"""),format.raw/*37.4*/("""}"""),format.raw/*37.5*/(""");
 
-			$("#at_tag").autocomplete("""),format.raw/*39.30*/("""{"""),format.raw/*39.31*/("""
-				source : availableDataSetNames
-			"""),format.raw/*41.4*/("""}"""),format.raw/*41.5*/(""");
-		"""),format.raw/*42.3*/("""}"""),format.raw/*42.4*/(""");
+		function getAllUser()"""),format.raw/*37.24*/("""{"""),format.raw/*37.25*/("""
+				$.ajax("""),format.raw/*38.12*/("""{"""),format.raw/*38.13*/("""
+					url: "/getAllUsers",
+					dataType: "json",
+					async : false,
+				"""),format.raw/*42.5*/("""}"""),format.raw/*42.6*/(""").done(function(data) """),format.raw/*42.28*/("""{"""),format.raw/*42.29*/("""
+
+					// alert(data['hash_tag']);
+					// console.log(data['hash_tag']);
+
+					//不确定tag的名字是啥
+					var response = data['userName'];
+					
+					// console.log("test2");
+					// console.log(v1.length);
+					// console.log(v1[5]);
+					// alert("finished");
+					all_user = response.split(";");
+					// return;
+					
+				"""),format.raw/*57.5*/("""}"""),format.raw/*57.6*/(""");
+		"""),format.raw/*58.3*/("""}"""),format.raw/*58.4*/("""
+
+
+		$(function() """),format.raw/*61.16*/("""{"""),format.raw/*61.17*/("""
+			// var availableDataSetNames = [
+	  //               "AIRS Air Temperature",
+			// 		"interim Sea Surface Temperature",
+			// 		"interim Total Cloud Fraction",
+			// 		"interim Vertical Wind Velocity" ];
+	
+			getAllHashtag();
+			getAllUser();
+
+			$("#hash_tag").autocomplete("""),format.raw/*71.32*/("""{"""),format.raw/*71.33*/("""
+				source : all_hash
+			"""),format.raw/*73.4*/("""}"""),format.raw/*73.5*/(""");
+
+			$("#at_tag").autocomplete("""),format.raw/*75.30*/("""{"""),format.raw/*75.31*/("""
+				source : all_user
+			"""),format.raw/*77.4*/("""}"""),format.raw/*77.5*/(""");
+		"""),format.raw/*78.3*/("""}"""),format.raw/*78.4*/(""");
 	</script>
 """)))};
 Seq[Any](format.raw/*1.47*/("""
 """),format.raw/*3.1*/("""
-"""),format.raw/*44.2*/("""
+"""),format.raw/*80.2*/("""
 
-"""),_display_(Seq[Any](/*46.2*/main("Comment",scripts)/*46.25*/ {_display_(Seq[Any](format.raw/*46.27*/("""  
+"""),_display_(Seq[Any](/*82.2*/main("Comment",scripts)/*82.25*/ {_display_(Seq[Any](format.raw/*82.27*/("""  
 	
-	"""),_display_(Seq[Any](/*48.3*/helper/*48.9*/.form(action = routes.Application.createNewComment)/*48.60*/ {_display_(Seq[Any](format.raw/*48.62*/("""
+	"""),_display_(Seq[Any](/*84.3*/helper/*84.9*/.form(action = routes.Application.createNewComment)/*84.60*/ {_display_(Seq[Any](format.raw/*84.62*/("""
 <div class="container"
-	style="background-image: url('"""),_display_(Seq[Any](/*50.33*/routes/*50.39*/.Assets.at("images/login-background.jpg"))),format.raw/*50.80*/("""'); height: 90vh; background-size: 100%; ">
+	style="background-image: url('"""),_display_(Seq[Any](/*86.33*/routes/*86.39*/.Assets.at("images/login-background.jpg"))),format.raw/*86.80*/("""'); height: 90vh; background-size: 100%; ">
 	<div
 		class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 		<form class="form-signin">
@@ -87,7 +123,7 @@ Seq[Any](format.raw/*1.47*/("""
 					<div class="form-group">
 						<div class="form-group">
 						Service Name: 
-							<select id="drop_service" name="drop_service" class="form-control" value='"""),_display_(Seq[Any](/*60.83*/commentForm("serviceName")/*60.109*/.value)),format.raw/*60.115*/("""'>
+							<select id="drop_service" name="drop_service" class="form-control" value='"""),_display_(Seq[Any](/*96.83*/commentForm("serviceName")/*96.109*/.value)),format.raw/*96.115*/("""'>
 		  						<option value="2-D-Variable-Map">2-D-Variable-Map</option>
 		  						<option value="2-D-Variable-Zonal-Mean">2-D-Variable-Zonal-Mean</option>
 		  						<option value="2-D-Variable-Time-Series">2-D-Variable-Time-Series</option>
@@ -108,7 +144,7 @@ Seq[Any](format.raw/*1.47*/("""
 			<div class="row">
 					<div class="form-group">
 						Rating: 
-						<select id="drop_rating" name="drop_rating" class="form-control" value='"""),_display_(Seq[Any](/*81.80*/commentForm("rate")/*81.99*/.value)),format.raw/*81.105*/("""'>
+						<select id="drop_rating" name="drop_rating" class="form-control" value='"""),_display_(Seq[Any](/*117.80*/commentForm("rate")/*117.99*/.value)),format.raw/*117.105*/("""'>
 	  						<option value="5">5</option>
 	  						<option value="4">4</option>
 	  						<option value="3">3</option>
@@ -120,17 +156,17 @@ Seq[Any](format.raw/*1.47*/("""
 
 			<div class="row">
 					<div class="form-group">
-						"""),_display_(Seq[Any](/*93.8*/inputText(commentForm("at_tag"), 'class -> "form-control", 'id -> "at_tag", 'placeholder -> "@", 'size->70))),format.raw/*93.115*/("""
+						"""),_display_(Seq[Any](/*129.8*/inputText(commentForm("at_tag"), 'class -> "form-control", 'id -> "at_tag", 'placeholder -> "@", 'size->70))),format.raw/*129.115*/("""
 					</div>
 			</div>
 
 			
 			<div class="row">
 					<div class="form-group">
-					"""),_display_(Seq[Any](/*100.7*/inputText(commentForm("hash_tag"), 'class -> "form-control", 'id -> "hash_tag", 'placeholder -> "#", 'size->70))),format.raw/*100.118*/("""
+					"""),_display_(Seq[Any](/*136.7*/inputText(commentForm("hash_tag"), 'class -> "form-control", 'id -> "hash_tag", 'placeholder -> "#", 'size->70))),format.raw/*136.118*/("""
 
 						<!-- <input type="text" name="hash_tag" id="hash_tag" class="form-control"
-							placeholder="#" required="" value='"""),_display_(Seq[Any](/*103.44*/commentForm("hash_tag")/*103.67*/.value)),format.raw/*103.73*/("""' onchange=""> -->
+							placeholder="#" required="" value='"""),_display_(Seq[Any](/*139.44*/commentForm("hash_tag")/*139.67*/.value)),format.raw/*139.73*/("""' onchange=""> -->
 					</div>
 			</div>			
 
@@ -138,7 +174,7 @@ Seq[Any](format.raw/*1.47*/("""
 					<div class="form-group">
 						<input type="text" name="comment" id="comment"
 							class="form-control" placeholder="Comment Here"
-							value='"""),_display_(Seq[Any](/*111.16*/commentForm("comment")/*111.38*/.value)),format.raw/*111.44*/("""'>
+							value='"""),_display_(Seq[Any](/*147.16*/commentForm("comment")/*147.38*/.value)),format.raw/*147.44*/("""'>
 					</div>
 			</div>
 
@@ -153,7 +189,7 @@ Seq[Any](format.raw/*1.47*/("""
 	</div>
 </div>
 
-""")))})),format.raw/*126.2*/(""" 
+""")))})),format.raw/*162.2*/(""" 
 """)))})))}
     }
     
@@ -166,11 +202,11 @@ Seq[Any](format.raw/*1.47*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Nov 19 00:04:09 EST 2015
+                    DATE: Tue Nov 24 21:52:53 EST 2015
                     SOURCE: /Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Frontend/app/views/climate/comment.scala.html
-                    HASH: 7c4bba3fc04c418b7daa7e3a48804edb8ccf5b19
-                    MATRIX: 808->1|946->66|960->73|1044->75|1095->91|1109->97|1170->137|1491->430|1520->431|1559->442|1588->443|1670->498|1698->499|1748->521|1777->522|1906->624|1934->625|1966->630|1994->631|2040->649|2069->650|2366->919|2395->920|2450->948|2478->949|2539->982|2568->983|2634->1022|2662->1023|2694->1028|2722->1029|2776->46|2803->64|2831->1044|2869->1047|2901->1070|2941->1072|2983->1079|2997->1085|3057->1136|3097->1138|3189->1194|3204->1200|3267->1241|3713->1651|3749->1677|3778->1683|5207->3076|5235->3095|5264->3101|5589->3391|5719->3498|5840->3583|5975->3694|6138->3820|6171->3843|6200->3849|6456->4068|6488->4090|6517->4096|6741->4288
-                    LINES: 26->1|29->4|29->4|31->4|32->5|32->5|32->5|39->12|39->12|40->13|40->13|43->16|43->16|43->16|43->16|48->21|48->21|49->22|49->22|52->25|52->25|62->35|62->35|64->37|64->37|66->39|66->39|68->41|68->41|69->42|69->42|72->1|73->3|74->44|76->46|76->46|76->46|78->48|78->48|78->48|78->48|80->50|80->50|80->50|90->60|90->60|90->60|111->81|111->81|111->81|123->93|123->93|130->100|130->100|133->103|133->103|133->103|141->111|141->111|141->111|156->126
+                    HASH: 0bbdefdf973a3cb646d698068810e6b94557b528
+                    MATRIX: 808->1|946->66|960->73|1044->75|1095->91|1109->97|1170->137|1524->463|1553->464|1594->477|1623->478|1726->554|1754->555|1804->577|1833->578|2164->882|2192->883|2224->888|2252->889|2306->915|2335->916|2375->928|2404->929|2505->1003|2533->1004|2583->1026|2612->1027|2957->1345|2985->1346|3017->1351|3045->1352|3091->1370|3120->1371|3427->1650|3456->1651|3509->1677|3537->1678|3598->1711|3627->1712|3680->1738|3708->1739|3740->1744|3768->1745|3822->46|3849->64|3877->1760|3915->1763|3947->1786|3987->1788|4029->1795|4043->1801|4103->1852|4143->1854|4235->1910|4250->1916|4313->1957|4759->2367|4795->2393|4824->2399|6254->3792|6283->3811|6313->3817|6639->4107|6770->4214|6891->4299|7026->4410|7189->4536|7222->4559|7251->4565|7507->4784|7539->4806|7568->4812|7792->5004
+                    LINES: 26->1|29->4|29->4|31->4|32->5|32->5|32->5|41->14|41->14|42->15|42->15|46->19|46->19|46->19|46->19|60->33|60->33|61->34|61->34|64->37|64->37|65->38|65->38|69->42|69->42|69->42|69->42|84->57|84->57|85->58|85->58|88->61|88->61|98->71|98->71|100->73|100->73|102->75|102->75|104->77|104->77|105->78|105->78|108->1|109->3|110->80|112->82|112->82|112->82|114->84|114->84|114->84|114->84|116->86|116->86|116->86|126->96|126->96|126->96|147->117|147->117|147->117|159->129|159->129|166->136|166->136|169->139|169->139|169->139|177->147|177->147|177->147|192->162
                     -- GENERATED --
                 */
             

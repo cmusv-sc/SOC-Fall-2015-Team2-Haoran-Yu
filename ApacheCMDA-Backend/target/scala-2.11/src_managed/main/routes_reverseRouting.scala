@@ -1,6 +1,6 @@
 // @SOURCE:/Users/Tongyun/SOC-Fall-2015-Team2-Haoran-Yu/ApacheCMDA-Backend/conf/routes
-// @HASH:8a85c54551fd2f6d46380a056fcee962624d2946
-// @DATE:Wed Nov 18 21:53:38 EST 2015
+// @HASH:a035a76da24be26e8cd9d8371ede2a14627a0981
+// @DATE:Tue Nov 24 21:52:59 EST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -18,6 +18,7 @@ import Router.queryString
 // @LINE:70
 // @LINE:65
 // @LINE:63
+// @LINE:60
 // @LINE:59
 // @LINE:58
 // @LINE:57
@@ -121,6 +122,7 @@ def deleteInstrument(id:Long): Call = {
 }
                           
 
+// @LINE:60
 // @LINE:59
 // @LINE:58
 // @LINE:57
@@ -153,12 +155,18 @@ def updateUser(id:Long): Call = {
 }
                         
 
+// @LINE:60
 // @LINE:56
 def getAllUsers(): Call = {
-   implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
-   Call("GET", _prefix + { _defaultPrefix } + "users/getAllUsers/json")
+   () match {
+// @LINE:56
+case ()  =>
+  implicit val _rrc = new ReverseRouteContext(Map(("format", "json")))
+  Call("GET", _prefix + { _defaultPrefix } + "users/getAllUsers/json")
+                                         
+   }
 }
-                        
+                                                
 
 // @LINE:58
 def isEmailExisted(): Call = {
@@ -461,6 +469,7 @@ def deleteClimateServiceByName(name:String): Call = {
 // @LINE:70
 // @LINE:65
 // @LINE:63
+// @LINE:60
 // @LINE:59
 // @LINE:58
 // @LINE:57
@@ -589,6 +598,7 @@ def deleteInstrument : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:60
 // @LINE:59
 // @LINE:58
 // @LINE:57
@@ -633,12 +643,18 @@ def updateUser : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:60
 // @LINE:56
 def getAllUsers : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserController.getAllUsers",
    """
       function() {
+      if (true) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "users/getAllUsers/json"})
+      }
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "UserController/getAllUsers"})
+      }
       }
    """
 )
@@ -1081,6 +1097,7 @@ def deleteClimateServiceByName : JavascriptReverseRoute = JavascriptReverseRoute
 // @LINE:70
 // @LINE:65
 // @LINE:63
+// @LINE:60
 // @LINE:59
 // @LINE:58
 // @LINE:57
@@ -1179,6 +1196,7 @@ def deleteInstrument(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.Han
 }
                           
 
+// @LINE:60
 // @LINE:59
 // @LINE:58
 // @LINE:57

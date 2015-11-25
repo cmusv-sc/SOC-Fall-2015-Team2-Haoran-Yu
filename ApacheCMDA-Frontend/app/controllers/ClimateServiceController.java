@@ -90,7 +90,7 @@ public class ClimateServiceController extends Controller {
 	}
 
 	//newly added
-	public static Result getSearchResult(){
+    public static Result getSearchResult(){
 		Form<ClimateService> dc = climateServiceForm.bindFromRequest();
 		ObjectNode jsonData = Json.newObject();
 		String serviceName = "";
@@ -100,10 +100,24 @@ public class ClimateServiceController extends Controller {
 		System.out.println(serviceName);
 			
 		List<ClimateService> response = ClimateService.queryClimateService(serviceName);
-		List<ClimateService> filteredResponse = new ArrayList<ClimateService>();
-		for(int i = 0; i < Math.min(3, response.size()); i++) {
-			filteredResponse.add(response.get(i));
-			System.out.println(response.get(i).getUrl());
+
+		//newly added
+		HashMap<String, List<ClimateService>> map = new HashMap<String, List<ClimateService>>();
+		for(int i = 0; i < response.size(); i++) {
+			ClimateService service = response.get(i);
+			List<ClimateService> list = map.containsKey(service.getClimateServiceName()) ?
+			map.get(service.getClimateServiceName()) : new ArrayList<ClimateService>();
+			list.add(service);
+			map.put(service.getClimateServiceName(), list);
+		}
+
+		List<List<ClimateService>> filteredResponse = new ArrayList<List<ClimateService>>();
+		int cnt = 0;
+		for(String key: map.keySet()) {
+			if(cnt == 3)	break;
+			List<ClimateService> list = map.get(key);
+			filteredResponse.add(list);
+			cnt++;
 		}
 		return ok(climateServiceList.render(filteredResponse, climateServiceForm));
 	}

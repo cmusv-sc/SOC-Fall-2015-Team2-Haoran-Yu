@@ -57,7 +57,7 @@ GET			  /users/getAllUsers/json																	@controllers.UserController.getA
 POST		  /users/isUserValid																		@controllers.UserController.isUserValid
 POST		  /users/isEmailExisted																		@controllers.UserController.isEmailExisted
 DELETE		  /users/delete/userName/:userName/password/:password										@controllers.UserController.deleteUserByUserNameandPassword(userName: String, password: String)
-
+GET           /UserController/getAllUsers                                           					@controllers.UserController.getAllUsers(format: String="json")
 
 # Comment
 POST          /comments/add                                                                                @controllers.CommentController.addComment
