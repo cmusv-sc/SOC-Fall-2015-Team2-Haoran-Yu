@@ -47,7 +47,6 @@ public class CommentController extends Controller {
 	}
 
     public Result addComment() {
-        System.out.println("hi,every one");
 		JsonNode json = request().body().asJson();
 		if (json == null) {
 			System.out.println("comment not created, expecting Json data");
