@@ -91,3 +91,387 @@ http://localhost:9034/climateService/getAllMostRecentClimateServicesByCreateTime
 2015-12-11 16:01:51,938 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
 http://localhost:9034/climateService/getAllMostUsedClimateServices/json
 
+2015-12-11 16:18:58,993 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServices/json
+
+2015-12-11 16:18:59,009 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:18:59,018 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:18:59,025 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:18:59,033 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:18:59,040 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:18:59,048 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:18:59,054 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:18:59,060 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:18:59,067 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:18:59,074 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:18:59,080 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:59:57,937 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServices/json
+
+2015-12-11 16:59:57,950 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:59:57,959 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:59:57,965 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:59:57,971 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:59:57,978 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:59:57,984 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:59:57,990 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:59:57,996 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:59:58,002 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:59:58,007 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 16:59:58,014 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:13:34,495 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServices/json
+
+2015-12-11 17:13:34,521 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:13:34,527 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:13:34,533 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:13:34,539 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:13:34,545 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:13:34,550 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:13:34,556 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:13:34,561 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:13:34,566 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:13:34,572 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:13:34,577 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:19,065 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:19,092 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/UserController/getAllUsers
+
+2015-12-11 17:14:31,846 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServices/json
+
+2015-12-11 17:14:31,856 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:31,861 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:31,867 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:31,872 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:31,878 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:31,884 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:31,889 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:31,895 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:31,902 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:31,909 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:31,915 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:44,610 - [INFO] - from application in play-akka.actor.default-dispatcher-94 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:44,623 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+http://localhost:9034/UserController/getAllUsers
+
+2015-12-11 17:14:50,996 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServices/json
+
+2015-12-11 17:14:51,009 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:51,016 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:51,022 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:51,028 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:51,034 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:51,043 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:51,052 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:51,059 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:51,066 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:51,074 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:14:51,082 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:01,622 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:01,634 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
+http://localhost:9034/UserController/getAllUsers
+
+2015-12-11 17:15:15,292 - [INFO] - from application in play-akka.actor.default-dispatcher-97 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:15,304 - [INFO] - from application in play-akka.actor.default-dispatcher-97 
+http://localhost:9034/UserController/getAllUsers
+
+2015-12-11 17:15:46,419 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServices/json
+
+2015-12-11 17:15:46,429 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:46,435 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:46,441 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:46,448 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:46,453 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:46,461 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:46,467 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:46,474 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:46,482 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:46,489 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:46,495 - [INFO] - from application in play-akka.actor.default-dispatcher-95 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:49,008 - [INFO] - from application in play-akka.actor.default-dispatcher-112 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:15:49,020 - [INFO] - from application in play-akka.actor.default-dispatcher-112 
+http://localhost:9034/UserController/getAllUsers
+
+2015-12-11 17:16:11,330 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServices/json
+
+2015-12-11 17:16:11,340 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:11,347 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:11,353 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:11,358 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:11,364 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:11,372 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:11,381 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:11,387 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:11,395 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:11,402 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:11,409 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:41,865 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:41,872 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:16:41,877 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:17:26,525 - [INFO] - from application in play-akka.actor.default-dispatcher-126 
+http://localhost:9034/climateService/getAllMostRecentClimateServicesByLatestAccessTime/json
+
+2015-12-11 17:17:39,472 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllMostRecentClimateServicesByCreateTime/json
+
+2015-12-11 17:17:51,051 - [INFO] - from application in play-akka.actor.default-dispatcher-128 
+http://localhost:9034/climateService/getAllMostUsedClimateServices/json
+
+2015-12-11 17:18:33,771 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServices/json
+
+2015-12-11 17:18:33,779 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:18:33,784 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:18:33,789 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:18:33,794 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:18:33,799 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:18:33,803 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:18:33,807 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:18:33,812 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:18:33,817 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:18:33,821 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:18:33,825 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:18:58,670 - [INFO] - from application in play-akka.actor.default-dispatcher-138 
+http://localhost:9034/climateService/getAllMostRecentClimateServicesByLatestAccessTime/json
+
+2015-12-11 17:19:01,386 - [INFO] - from application in play-akka.actor.default-dispatcher-143 
+http://localhost:9034/climateService/getAllMostRecentClimateServicesByCreateTime/json
+
+2015-12-11 17:19:04,451 - [INFO] - from application in play-akka.actor.default-dispatcher-143 
+http://localhost:9034/climateService/getAllMostRecentClimateServicesByCreateTime/json
+
+2015-12-11 17:19:06,471 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServices/json
+
+2015-12-11 17:19:06,478 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:19:06,484 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:19:06,489 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:19:06,493 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:19:06,497 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:19:06,502 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:19:06,506 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:19:06,511 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:19:06,525 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:19:06,529 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:19:06,535 - [INFO] - from application in play-akka.actor.default-dispatcher-141 
+http://localhost:9034/climateService/getAllClimateServicesRate/json
+
+2015-12-11 17:19:20,347 - [INFO] - from application in play-akka.actor.default-dispatcher-137 
+http://localhost:9034/climateService/getAllMostRecentClimateServicesByLatestAccessTime/json
+
